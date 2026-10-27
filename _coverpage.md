@@ -6,4 +6,4 @@
 
 Dr. Dezeming　·　2026 年 · 第一版
 
-[开始阅读](book/chapters/ch01.md)　[下载 PDF](output/parametric-human-models.pdf)
+[开始阅读](book/chapters/ch01.md)　<a href="output/parametric-human-models.pdf" target="_blank" rel="noopener">下载 PDF</a>

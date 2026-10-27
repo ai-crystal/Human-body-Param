@@ -73,6 +73,16 @@
   <div id="app">正在加载…</div>
 
   <script>
+    // 兜底：docsify 把静态文件链接改写成 hash 路由时，直接跳到真实文件
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#/"]');
+      if (!a) return;
+      var m = a.getAttribute('href').match(/^#\/(.+\.(?:pdf|zip|png|jpe?g|gif|svg|json|txt|csv))$/i);
+      if (!m) return;
+      e.preventDefault();
+      window.open(new URL('.', location.href).pathname + m[1], '_blank', 'noopener');
+    }, true);
+
     window.$docsify = {
       name: '人体参数化技术',
       nameLink: '/',
@@ -81,7 +91,6 @@
       subMaxLevel: 2,
       coverpage: true,
       onlyCover: false,
-      relativePath: true,
       alias: { '.*/_sidebar.md': '/_sidebar.md' },
       auto2top: true,
       maxLevel: 3,
@@ -112,6 +121,9 @@
           hook.afterEach(function (html) {
             var base = new URL('.', location.href).pathname;   // '/' 或 '/<repo>/'
             html = html.replace(/(src=")\.\.\/images\//g, '$1' + base + 'book/images/');
+            // docsify 会把相对链接统一改写成 hash 路由；.pdf/.zip 这类静态文件要改回真实地址
+            html = html.replace(/href="#\/([^"#]+\.(?:pdf|zip|png|jpe?g|gif|svg|json|txt|csv|md\?raw=1))"/gi,
+              function (_, p) { return 'href="' + base + p + '" target="_blank" rel="noopener"'; });
             // [@key] / [@a,@b] -> 上标编号，点击跳到附录 D 对应条目
             html = html.replace(/\[@([A-Za-z0-9_,;\s]+)\]/g, function (_, keys) {
               var map = window.CITES || {};
@@ -126,6 +138,11 @@
             return html;
           });
           hook.doneEach(function () {
+            var base = new URL('.', location.href).pathname;
+            document.querySelectorAll('a[href^="#/"]').forEach(function (a) {
+              var m = a.getAttribute('href').match(/^#\/(.+\.(?:pdf|zip|png|jpe?g|gif|svg|json|txt|csv))$/i);
+              if (m) { a.setAttribute('href', base + m[1]); a.setAttribute('target', '_blank'); }
+            });
             var el = document.querySelector('.markdown-section');
             if (!el || typeof renderMathInElement !== 'function') return;
             renderMathInElement(el, {

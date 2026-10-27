@@ -6,7 +6,11 @@
 
 作者：**Dr. Dezeming**　·　2026 年 · 第一版
 
-[开始阅读](book/chapters/ch01.md)　·　[下载 PDF](output/parametric-human-models.pdf)
+> 📖 **在线阅读（网页版）**：<https://ai-crystal.github.io/Human-body-Param/>
+>
+> 章节直达链接：`https://ai-crystal.github.io/Human-body-Param/#/book/chapters/ch07`
+
+[开始阅读](book/chapters/ch01.md)　·　<a href="output/parametric-human-models.pdf" target="_blank" rel="noopener">下载 PDF</a>
 
 ![封面](book/images/cover/cover_front.jpg)
 
@@ -32,7 +36,7 @@
 ## 阅读方式
 
 - **在线**：左侧目录按篇分组，每章一个独立链接，可直接分享 `#/book/chapters/ch07` 这样的地址。
-- **下载**：整本 PDF 见 [output/parametric-human-models.pdf](output/parametric-human-models.pdf)。
+- **下载**：整本 PDF 见 <a href="output/parametric-human-models.pdf" target="_blank" rel="noopener">output/parametric-human-models.pdf</a>。
 - 所有插图都是程序生成的矢量风格示意图，源图在 `book/images/`，绘图代码在 `book/code/`，可以改参数重画。
 
 ## 约定

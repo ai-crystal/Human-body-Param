@@ -57,4 +57,4 @@
 - [后记](book/front/afterword.md)
 - [封底](book/front/backcover.md)
 
-- [下载 PDF](output/parametric-human-models.pdf)
+- <a href="output/parametric-human-models.pdf" target="_blank" rel="noopener">下载 PDF</a>
