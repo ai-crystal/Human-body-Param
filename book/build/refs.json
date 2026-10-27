@@ -1,0 +1,2116 @@
+[
+ {
+  "key": "cootes1995asm",
+  "title": "Active Shape Models-Their Training and Application",
+  "year": 1995,
+  "venue": "CVIU",
+  "authors": [
+   "Timothy F. Cootes",
+   "Christopher J. Taylor",
+   "David H. Cooper",
+   "Jim Graham"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "cootes2001aam",
+  "title": "Statistical Models of Appearance for Computer Vision",
+  "year": 2001,
+  "venue": "BMVC",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "blanz1999morphable",
+  "title": "A Morphable Model For The Synthesis Of 3D Faces",
+  "year": 1999,
+  "venue": "SIGGRAPH",
+  "authors": [
+   "Volker Blanz",
+   "Thomas Vetter"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "allen2003space",
+  "title": "The Space of Human Body Shapes: Reconstruction and Parameterization from Range Scans",
+  "year": 2003,
+  "venue": "SIGGRAPH",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "anguelov2005scape",
+  "title": "SCAPE: Shape Completion and Animation of People",
+  "year": 2005,
+  "venue": "SIGGRAPH",
+  "authors": [
+   "Dragomir Anguelov",
+   "Praveen Srinivasan",
+   "Daphne Koller",
+   "Sebastian Thrun",
+   "Jim Rodgers",
+   "James Davis"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "hasler2009statistical",
+  "title": "A Statistical Model of Human Pose and Body Shape",
+  "year": 2009,
+  "venue": "Eurographics",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "bogo2014faust",
+  "title": "FAUST: Dataset and Evaluation for 3D Mesh Registration",
+  "year": 2014,
+  "venue": "CVPR",
+  "authors": [
+   "Federica Bogo",
+   "Javier Romero",
+   "Matthew Loper",
+   "Michael J. Black"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "egger2020survey",
+  "title": "3D Morphable Face Models -- Past, Present and Future",
+  "year": 2020,
+  "venue": "IJCV",
+  "authors": [
+   "Bernhard Egger",
+   "William A. P. Smith",
+   "Ayush Tewari",
+   "Stefanie Wuhrer",
+   "Michael Zollhoefer",
+   "Thabo Beeler",
+   "Florian Bernard",
+   "Timo Bolkart",
+   "Adam Kortylewski",
+   "Sami Romdhani",
+   "Christian Theobalt",
+   "Volker Blanz",
+   "Thomas Vetter"
+  ],
+  "arxiv": "1909.01815v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "loper2014opendr",
+  "title": "OpenDR: An Approximate Differentiable Renderer",
+  "year": 2014,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "kavan2010skinning",
+  "title": "Fast and Efficient Skinning of Animated Meshes",
+  "year": 2010,
+  "venue": "I3D",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "jacobson2011bounded",
+  "title": "Bounded Biharmonic Weights for Real-Time Deformation",
+  "year": 2011,
+  "venue": "SIGGRAPH",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "lewis2000pose",
+  "title": "Pose Space Deformation: A Unified Approach to Shape Interpolation and Skeleton-Driven Deformation",
+  "year": 2000,
+  "venue": "SIGGRAPH",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "magnenat1988joint",
+  "title": "Joint-Dependent Local Deformations for Hand Animation and Object Grasping",
+  "year": 1988,
+  "venue": "Book Chapter",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "amberg2007optimal",
+  "title": "Optimal Step Nonrigid ICP Algorithms for Surface Registration",
+  "year": 2007,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "luthi2018gpm",
+  "title": "Gaussian Process Morphable Models",
+  "year": 2018,
+  "venue": "TPAMI",
+  "authors": [
+   "Marcel Lüthi",
+   "Thomas Gerig",
+   "Christoph Jud",
+   "Thomas Vetter"
+  ],
+  "arxiv": "1603.07254v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "heimann2009statistical",
+  "title": "Statistical Shape Models for 3D Medical Image Segmentation: A Review",
+  "year": 2009,
+  "venue": "Medical Image Analysis",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "vlasic2005face",
+  "title": "Face Transfer with Multilinear Models",
+  "year": 2005,
+  "venue": "SIGGRAPH",
+  "authors": [
+   "Daniel Vlasic",
+   "Matthew Brand",
+   "Hanspeter Pfister",
+   "Jovan Popović"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "paysan2009bfm",
+  "title": "A 3D Face Model for Pose and Illumination Invariant Face Recognition",
+  "year": 2009,
+  "venue": "3DPVT",
+  "authors": [
+   "Pascal Paysan",
+   "Reinhard Knothe",
+   "Brian Amberg",
+   "Sami Romdhani",
+   "Thomas Vetter"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "loper2015smpl",
+  "title": "SMPL: A Skinned Multi-Person Linear Model",
+  "year": 2015,
+  "venue": "SIGGRAPH Asia",
+  "authors": [
+   "Matthew Loper",
+   "Naureen Mahmood",
+   "Javier Romero",
+   "Gerard Pons-Moll",
+   "Michael J. Black"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "loper2014mosh",
+  "title": "MoSh: Motion and Shape Capture from Sparse Markers",
+  "year": 2014,
+  "venue": "ECCV",
+  "authors": [
+   "Matthew Loper",
+   "Naureen Mahmood",
+   "Michael J. Black"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "bogo2016smplify",
+  "title": "Keep It SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image",
+  "year": 2016,
+  "venue": "ECCV",
+  "authors": [
+   "Bogo, Federica",
+   "Kanazawa, Angjoo",
+   "Lassner, Christoph",
+   "Gehler, Peter",
+   "Romero, Javier",
+   "Black, Michael J."
+  ],
+  "arxiv": "1607.08128",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kanazawa2018hmr",
+  "title": "End-to-end Recovery of Human Shape and Pose",
+  "year": 2018,
+  "venue": "CVPR",
+  "authors": [
+   "Kanazawa, Angjoo",
+   "Black, Michael J.",
+   "Jacobs, David W.",
+   "Malik, Jitendra"
+  ],
+  "arxiv": "1712.06584",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kolotouros2019spin",
+  "title": "Learning to Reconstruct 3D Human Pose and Shape via Model-fitting in the Loop",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "1906.05664",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kolotouros2019graphcmr",
+  "title": "Convolutional Mesh Regression for Single-Image Human Shape Reconstruction",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "1906.05260",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "omran2018nbf",
+  "title": "Neural Body Fitting: Unifying Deep Learning and Model Based Human Pose and Shape Estimation",
+  "year": 2018,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "1804.06510",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "varol2017bodynet",
+  "title": "BodyNet: Volumetric Inference of 3D Human Body Shapes",
+  "year": 2017,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "1707.00382",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "xiang2019monoculartotalcapture",
+  "title": "Monocular Total Capture: Posing Face, Body, and Hands in the Wild",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [
+   "Xiang, Donglai",
+   "Joo, Hanbyul",
+   "Sheikh, Yaser"
+  ],
+  "arxiv": "1812.01598",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "joo2018totalcapture",
+  "title": "Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies",
+  "year": 2018,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "1804.00778",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "pavlakos2019smplx",
+  "title": "Expressive Body Capture: 3D Hands, Face, and Body from a Single Image",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [
+   "Pavlakos, Georgios",
+   "Choutas, Vasileios",
+   "Ghorbani, Nima",
+   "Bolkart, Timo",
+   "Osman, Ahmed A. A.",
+   "Tzionas, Dimitrios",
+   "Black, Michael J."
+  ],
+  "arxiv": "1904.05866",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "mahmood2019amass",
+  "title": "AMASS: Archive of Motion Capture as Surface Shapes",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [
+   "Mahmood, Naureen",
+   "Ghorbani, Nima",
+   "Troje, Nikolaus F.",
+   "Pons-Moll, Gerard",
+   "Black, Michael J."
+  ],
+  "arxiv": "1904.03278",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "choutas2020ghum",
+  "title": "GHUM & GHUML: Generative 3D Human Shape and Articulated Pose Models",
+  "year": 2020,
+  "venue": "3DV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "osman2020star",
+  "title": "STAR: Sparse Trained Articulated Human Body Regressor",
+  "year": 2020,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "2008.02616",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "alldieck2018video",
+  "title": "Video Based Reconstruction of 3D People Models",
+  "year": 2018,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "1803.04795",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "alldieck2019tex2shape",
+  "title": "Tex2Shape: Detailed Full Human Body Geometry from a Single Image",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [
+   "Alldieck, Thiemo",
+   "Pons-Moll, Gerard",
+   "Theobalt, Christian",
+   "Magnor, Marcus"
+  ],
+  "arxiv": "1904.08645",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "ma2020points",
+  "title": "The Power of Points for Modeling Humans in Clothing",
+  "year": 2021,
+  "venue": "ICCV",
+  "authors": [
+   "Ma, Qianli",
+   "Yang, Jinlong",
+   "Tang, Siyu",
+   "Black, Michael J."
+  ],
+  "arxiv": "2109.01137",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "ma2020cape",
+  "title": "Learning to Dress 3D People in Generative Clothing",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [
+   "Ma, Qianli",
+   "Yang, Jinlong",
+   "Ranjan, Anurag",
+   "Pujades, Sergi",
+   "Pons-Moll, Gerard",
+   "Tang, Siyu",
+   "Black, Michael J."
+  ],
+  "arxiv": "1907.13615",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kocabas2020vibe",
+  "title": "VIBE: Video Inference for Human Body Pose and Shape Estimation",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [
+   "Kocabas, Muhammed",
+   "Athanasiou, Nikos",
+   "Black, Michael J."
+  ],
+  "arxiv": "1912.05656",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kanazawa2019dynamics",
+  "title": "Learning 3D Human Dynamics from Video",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [
+   "Kanazawa, Angjoo",
+   "Zhang, Jason Y.",
+   "Felsen, Panna",
+   "Malik, Jitendra"
+  ],
+  "arxiv": "1812.01601",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "bhatnagar2019multilevel",
+  "title": "Multi-Level 3D Human Shape Reconstruction",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "zanfir2018deep",
+  "title": "Deep Network for the Integrated 3D Sensing of Multiple People in Natural Images",
+  "year": 2018,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "sun2019deep",
+  "title": "Deep Human Correspondence via Four Component Matching",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "ge2023human321",
+  "title": "Human 3.0: Foundation Models for 3D Humans",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "cai2023smplerx",
+  "title": "SMPLer-X: Scaling Up Expressive Human Pose and Shape Estimation",
+  "year": 2023,
+  "venue": "NeurIPS",
+  "authors": [
+   "Cai, Zhongang",
+   "Yin, Wanqi",
+   "Zeng, Ailing",
+   "Wei, Chen",
+   "Sun, Qingping",
+   "Wang, Yanjun",
+   "Pang, Hui En",
+   "Mei, Haiyi",
+   "Zhang, Mingyuan",
+   "Zhang, Lei",
+   "Loy, Chen Change",
+   "Yang, Lei",
+   "Liu, Ziwei"
+  ],
+  "arxiv": "2309.17448",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "baradel2024multihmr",
+  "title": "Multi-HMR: Multi-Person Whole-Body Human Mesh Recovery in a Single Shot",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Baradel, Fabien",
+   "Armando, Matthieu",
+   "Galaaoui, Salma",
+   "Brégier, Romain",
+   "Weinzaepfel, Philippe",
+   "Rogez, Grégory",
+   "Lucas, Thomas"
+  ],
+  "arxiv": "2402.14654",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "cho2024camerahmr",
+  "title": "CameraHMR: Aligning People with Perspective",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Patel, Priyanka",
+   "Black, Michael J."
+  ],
+  "arxiv": "2411.08128",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "dwivedi2024nlfs",
+  "title": "NLF: Neural Local Fields for Metric-Scale Human Reconstruction",
+  "year": 2024,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "saito2019pifu",
+  "title": "PIFu: Pixel-Aligned Implicit Function for High-Resolution Clothed Human Digitization",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "chen2021snarf",
+  "title": "SNARF: Differentiable Forward Skinning for Animating Non-Rigid Neural Implicit Shapes",
+  "year": 2021,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "shin2024hmr2",
+  "title": "HMR 2.0: A Strategy For Decoding Non-Linear Structure in Human Modeling",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "goel2023humans4d",
+  "title": "Humans in 4D: Reconstructing and Tracking Humans with Transformers",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "wang2023sdfusion",
+  "title": "SDFusion: Multimodal 3D Shape Completion, Reconstruction, and Generation",
+  "year": 2023,
+  "venue": "CVPR",
+  "authors": [
+   "Yen-Chi Cheng",
+   "Hsin-Ying Lee",
+   "Sergey Tulyakov",
+   "Alexander Schwing",
+   "Liangyan Gui"
+  ],
+  "arxiv": "2212.04493v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "tiwari2022text2mesh",
+  "title": "Text2Mesh: Text-Driven Neural Stylization for Meshes",
+  "year": 2022,
+  "venue": "CVPR",
+  "authors": [
+   "Oscar Michel",
+   "Roi Bar-On",
+   "Richard Liu",
+   "Sagie Benaim",
+   "Rana Hanocka"
+  ],
+  "arxiv": "2112.03221v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "gong2023humanrf",
+  "title": "HumanRF: High-Fidelity Neural Radiance Fields for Humans in Motion",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [
+   "Mustafa Işık",
+   "Martin Rünz",
+   "Markos Georgopoulos",
+   "Taras Khakhulin",
+   "Jonathan Starck",
+   "Lourdes Agapito",
+   "Matthias Nießner"
+  ],
+  "arxiv": "2305.06356v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "li2022human",
+  "title": "HumanNeRF: Free-viewpoint Rendering of Moving People from Monocular Video",
+  "year": 2022,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "2201.00506",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "jiang2023instantavatar",
+  "title": "InstantAvatar: Learning Avatars from Monocular Video in 60 Seconds",
+  "year": 2023,
+  "venue": "CVPR",
+  "authors": [
+   "Jiang, Tianjian",
+   "Chen, Xu",
+   "Song, Jie",
+   "Hilliges, Otmar"
+  ],
+  "arxiv": "2212.10550",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zielonka2023splatting",
+  "title": "Drivable 3D Gaussian Avatars",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "qian2024gaussianavatars",
+  "title": "GaussianAvatars: Photorealistic Head Avatars with Rigged 3D Gaussians",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Qian, Shenhan",
+   "Kirschstein, Tobias",
+   "Schoneveld, Liam",
+   "Davoli, Davide",
+   "Giebenhain, Simon",
+   "Nießner, Matthias"
+  ],
+  "arxiv": "2312.02069",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "moreau2024splattingavatar",
+  "title": "SplattingAvatar: Realistic Real-Time Human Avatars with Mesh-Embedded Gaussian Splatting",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Shao, Zhijing",
+   "Wang, Zhaolong",
+   "Li, Zhuang",
+   "Wang, Duotun",
+   "Lin, Xiangru",
+   "Zhang, Yu",
+   "Fan, Mingming",
+   "Wang, Zeyu"
+  ],
+  "arxiv": "2403.05087",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "tewari2020stylerig",
+  "title": "StyleRig: Rigging StyleGAN for 3D Control over Portrait Images",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [
+   "Tewari, Ayush",
+   "Elgharib, Mohamed",
+   "Bharaj, Gaurav",
+   "Bernard, Florian",
+   "Seidel, Hans-Peter",
+   "Pérez, Patrick",
+   "Zollhöfer, Michael",
+   "Theobalt, Christian"
+  ],
+  "arxiv": "2004.00121",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "hong2022motiondiffuse",
+  "title": "MotionDiffuse: Text-Driven Human Motion Generation with Diffusion Model",
+  "year": 2022,
+  "venue": "AAAI",
+  "authors": [
+   "Zhang, Mingyuan",
+   "Cai, Zhongang",
+   "Pan, Liang",
+   "Hong, Fangzhou",
+   "Guo, Xinying",
+   "Yang, Lei",
+   "Liu, Ziwei"
+  ],
+  "arxiv": "2208.15001",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "tevet2022mdm",
+  "title": "Human Motion Diffusion Model",
+  "year": 2022,
+  "venue": "ICLR",
+  "authors": [
+   "Tevet, Guy",
+   "Raab, Sigal",
+   "Gordon, Brian",
+   "Shafir, Yonatan",
+   "Cohen-Or, Daniel",
+   "Bermano, Amit H."
+  ],
+  "arxiv": "2209.14916",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "rempe2021humor",
+  "title": "HuMoR: 3D Human Motion Model for Robust Pose Estimation",
+  "year": 2021,
+  "venue": "ICCV",
+  "authors": [
+   "Rempe, Davis",
+   "Birdal, Tolga",
+   "Hertzmann, Aaron",
+   "Yang, Jimei",
+   "Sridhar, Srinath",
+   "Guibas, Leonidas J."
+  ],
+  "arxiv": "2105.04668",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "feng2022posa",
+  "title": "POSA: Perpetual Human Motion Reconstruction from Monocular Videos",
+  "year": 2022,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "tripathi2023avatar",
+  "title": "Avatar: Text-guided Generation of Animatable Human Avatars",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "huang2024gaussian",
+  "title": "Gaussian Control: Controllable 3D Gaussian Avatars",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "weng2024human",
+  "title": "Human Motion Generation: A Survey",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Wentao Zhu",
+   "Xiaoxuan Ma",
+   "Dongwoo Ro",
+   "Hai Ci",
+   "Jinlu Zhang",
+   "Jiaxin Shi",
+   "Feng Gao",
+   "Qi Tian",
+   "Yizhou Wang"
+  ],
+  "arxiv": "2307.10894v3",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "liao2024motion",
+  "title": "MotionLLM: Understanding Human Behaviors from Human Motions and Videos",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Ling-Hao Chen",
+   "Shunlin Lu",
+   "Ailing Zeng",
+   "Hao Zhang",
+   "Benyou Wang",
+   "Ruimao Zhang",
+   "Lei Zhang"
+  ],
+  "arxiv": "2405.20340v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "li2017flame",
+  "title": "Learning a model of facial shape and expression from 4D scans",
+  "year": 2017,
+  "venue": "SIGGRAPH Asia",
+  "authors": [
+   "Tianye Li",
+   "Timo Bolkart",
+   "Michael J. Black",
+   "Hao Li",
+   "Javier Romero"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "booth2018inwild",
+  "title": "3D Face Morphable Models \"In-the-Wild\"",
+  "year": 2018,
+  "venue": "ECCV",
+  "authors": [
+   "James Booth",
+   "Epameinondas Antonakos",
+   "Stylianos Ploumpis",
+   "George Trigeorgis",
+   "Yannis Panagakis",
+   "Stefanos Zafeiriou"
+  ],
+  "arxiv": "1701.05360v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "booth2019spatial",
+  "title": "3D Morphable Models as Spatial Transformer Networks",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [
+   "Anil Bas",
+   "Patrik Huber",
+   "William A. P. Smith",
+   "Muhammad Awais",
+   "Josef Kittler"
+  ],
+  "arxiv": "1708.07199v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "feng2021deca",
+  "title": "Learning an Animatable Detailed 3D Face Model from In-The-Wild Images",
+  "year": 2021,
+  "venue": "SIGGRAPH",
+  "authors": [
+   "Feng, Yao",
+   "Feng, Haiwen",
+   "Black, Michael J.",
+   "Bolkart, Timo"
+  ],
+  "arxiv": "2012.04012",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "feng2022faceverse",
+  "title": "FaceVerse: a Fine-grained and Detail-controllable 3D Face Morphable Model from a Hybrid Dataset",
+  "year": 2022,
+  "venue": "CVPR",
+  "authors": [
+   "Lizhen Wang",
+   "Zhiyuan Chen",
+   "Tao Yu",
+   "Chenguang Ma",
+   "Liang Li",
+   "Yebin Liu"
+  ],
+  "arxiv": "2203.14057",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "deng2019accurate",
+  "title": "Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Robust Face Parsing to Dense Landmarks",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "1902.01064",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "tewari2017mofa",
+  "title": "MoFA: Model-based Deep Convolutional Face Autoencoder for Unsupervised Monocular Reconstruction",
+  "year": 2017,
+  "venue": "CVPR",
+  "authors": [
+   "Tewari, Ayush",
+   "Zollhöfer, Michael",
+   "Kim, Hyeongwoo",
+   "Garrido, Pablo",
+   "Bernard, Florian",
+   "Pérez, Patrick",
+   "Theobalt, Christian"
+  ],
+  "arxiv": "1703.10590",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "gecer2019ganfit",
+  "title": "GANFIT: Generative Adversarial Network Fitting for High Fidelity 3D Face Reconstruction",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [
+   "Gecer, Baris",
+   "Ploumpis, Stylianos",
+   "Kotsia, Irene",
+   "Zafeiriou, Stefanos"
+  ],
+  "arxiv": "1902.05978",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "lattas2020avatarme",
+  "title": "AvatarMe: Realistically Renderable 3D Facial Reconstruction \"in-the-wild\"",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [
+   "Alexandros Lattas",
+   "Stylianos Moschoglou",
+   "Baris Gecer",
+   "Stylianos Ploumpis",
+   "Vasileios Triantafyllou",
+   "Abhijeet Ghosh",
+   "Stefanos Zafeiriou"
+  ],
+  "arxiv": "2004.04534",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "lattas2021avatarmepp",
+  "title": "AvatarMe++: Facial Shape and BRDF Inference with Photorealistic Rendering-Aware GANs",
+  "year": 2021,
+  "venue": "TPAMI",
+  "authors": [
+   "Alexandros Lattas",
+   "Stylianos Moschoglou",
+   "Stylianos Ploumpis",
+   "Baris Gecer",
+   "Abhijeet Ghosh",
+   "Stefanos Zafeiriou"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zhu2020facescape",
+  "title": "FaceScape: A Large-Scale High Quality 3D Face Dataset and Detailed Riggable 3D Face Prediction",
+  "year": 2020,
+  "venue": "TPAMI",
+  "authors": [
+   "Haotian Yang",
+   "Hao Zhu",
+   "Yanru Wang",
+   "Mingkai Huang",
+   "Qiu Shen",
+   "Ruigang Yang",
+   "Xun Cao"
+  ],
+  "arxiv": "2011.12438",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "ziqq2022mica",
+  "title": "MICA: Towards Metrically Accurate 3D Face Reconstruction",
+  "year": 2022,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "danvev2022emoca",
+  "title": "EMOCA: Emotion Driven Monocular Face Capture and Animation",
+  "year": 2022,
+  "venue": "CVPR",
+  "authors": [
+   "Radek Daněček",
+   "Michael J. Black",
+   "Timo Bolkart"
+  ],
+  "arxiv": "2204.01050",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "filntisis2022spectre",
+  "title": "SPECTRE: Visual Speech-Aware Perceptual 3D Facial Expression Reconstruction from Videos",
+  "year": 2022,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "li2023smirk",
+  "title": "SMIRK: 3D Facial Meshes at Scale",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [
+   "George Retsinas",
+   "Panagiotis P. Filntisis",
+   "Radek Danecek",
+   "Victoria F. Abrevaya",
+   "Anastasios Roussos",
+   "Timo Bolkart",
+   "Petros Maragos"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "garbin2023nphm",
+  "title": "Learning Neural Parametric Head Models",
+  "year": 2023,
+  "venue": "CVPR",
+  "authors": [
+   "Simon Giebenhain",
+   "Tobias Kirschstein",
+   "Markos Georgopoulos",
+   "Martin Rünz",
+   "Lourdes Agapito",
+   "Matthias Nießner"
+  ],
+  "arxiv": "2212.02761v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "garbin2024mononphm",
+  "title": "MonoNPHM: Dynamic Head Reconstruction from Monocular Videos",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Simon Giebenhain",
+   "Tobias Kirschstein",
+   "Markos Georgopoulos",
+   "Martin Rünz",
+   "Lourdes Agapito",
+   "Matthias Nießner"
+  ],
+  "arxiv": "2312.06740v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kiran2023gaussian",
+  "title": "Gaussian Avatars: Photorealistic Head Avatars with Rigged 3D Gaussians",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Shenhan Qian",
+   "Tobias Kirschstein",
+   "Liam Schoneveld",
+   "Davide Davoli",
+   "Simon Giebenhain",
+   "Matthias Nießner"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "xu2023flashavatar",
+  "title": "FlashAvatar: High-fidelity Head Avatar with Efficient Gaussian Embedding",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Jun Xiang",
+   "Xuan Gao",
+   "Yudong Guo",
+   "Juyong Zhang"
+  ],
+  "arxiv": "2312.02214v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "ye2023geneface",
+  "title": "GeneFace: Generalized and High-Fidelity Audio-Driven 3D Talking Face Synthesis",
+  "year": 2023,
+  "venue": "ICLR",
+  "authors": [
+   "Zhenhui Ye",
+   "Ziyue Jiang",
+   "Yi Ren",
+   "Jinglin Liu",
+   "Jinzheng He",
+   "Zhou Zhao"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zhang2023sadtalker",
+  "title": "SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation",
+  "year": 2023,
+  "venue": "CVPR",
+  "authors": [
+   "Wenxuan Zhang",
+   "Xiaodong Cun",
+   "Xuan Wang",
+   "Yong Zhang",
+   "Xi Shen",
+   "Yu Guo",
+   "Ying Shan",
+   "Fei Wang"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "wu2023emote",
+  "title": "EMOTE: Emotional Speech-Driven Animation with Content-Emotion Disentanglement",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "2306.08990",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "peng2024media2face",
+  "title": "Media2Face: Co-speech Facial Animation Generation With Multi-Modality Guidance",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Qingcheng Zhao",
+   "Pengyu Long",
+   "Qixuan Zhang",
+   "Dafei Qin",
+   "Han Liang",
+   "Longwen Zhang",
+   "Yingliang Zhang",
+   "Jingyi Yu",
+   "Lan Xu"
+  ],
+  "arxiv": "2401.15687v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zhang2024fantasytalking",
+  "title": "FantasyTalking: Realistic Talking Portrait Synthesis via Audio-guided Motion Generation",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "danecek2011faces",
+  "title": "Real-time 3D Head Pose and Facial Landmark Estimation from Depth Images",
+  "year": 2011,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "cao2013displaced",
+  "title": "Displaced Dynamic Expression Regression for Real-time Facial Tracking and Animation",
+  "year": 2013,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "thies2016face2face",
+  "title": "Face2Face: Real-time Face Capture and Reenactment of RGB Videos",
+  "year": 2016,
+  "venue": "CVPR",
+  "authors": [
+   "Justus Thies",
+   "Michael Zollhöfer",
+   "Marc Stamminger",
+   "Christian Theobalt",
+   "Matthias Nießner"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kim2018deep",
+  "title": "Deep Video Portraits",
+  "year": 2018,
+  "venue": "CVPR",
+  "authors": [
+   "Hyeongwoo Kim",
+   "Pablo Garrido",
+   "Ayush Tewari",
+   "Weipeng Xu",
+   "Justus Thies",
+   "Matthias Nießner",
+   "Patrick Pérez",
+   "Christian Richardt",
+   "Michael Zollhöfer",
+   "Christian Theobalt"
+  ],
+  "arxiv": "",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zollhofer2018state",
+  "title": "State of the Art on Monocular 3D Face Reconstruction, Tracking, and Applications",
+  "year": 2018,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "hu2017disentangled",
+  "title": "Disentangling Factors of Variation by Mixing Them",
+  "year": 2017,
+  "venue": "SIGGRAPH",
+  "authors": [
+   "Qiyang Hu",
+   "Attila Szabó",
+   "Tiziano Portenier",
+   "Matthias Zwicker",
+   "Paolo Favaro"
+  ],
+  "arxiv": "1711.07410v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "wu2024face",
+  "title": "Face Reconstruction from Portrait Images: A Survey",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "romero2017mano",
+  "title": "Embodied Hands: Modeling and Capturing Hands and Bodies Together",
+  "year": 2017,
+  "venue": "SIGGRAPH Asia",
+  "authors": [
+   "Javier Romero",
+   "Dimitrios Tzionas",
+   "Michael J. Black"
+  ],
+  "arxiv": "2201.02610v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "boukhayma2019hands",
+  "title": "3D Hand Shape and Pose From Images in the Wild",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [
+   "Boukhayma, Adnane",
+   "de Bem, Rodrigo",
+   "Torr, Philip H. S."
+  ],
+  "arxiv": "1902.03451",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zhang2019endtoend",
+  "title": "End-to-End Hand Mesh Recovery via Semantic Aggregation and Adaptive 2D-1D Registration",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "mueller2019ho",
+  "title": "H+O: Unified Egocentric Dense 3D Hand-Object Pose Estimation",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "1905.02579",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "hasson2019joint",
+  "title": "Learning Joint Reconstruction of Hands and Manipulated Objects",
+  "year": 2019,
+  "venue": "CVPR",
+  "authors": [
+   "Hasson, Yana",
+   "Varol, Gül",
+   "Tzionas, Dimitrios",
+   "Kalevatykh, Igor",
+   "Black, Michael J.",
+   "Laptev, Ivan",
+   "Schmid, Cordelia"
+  ],
+  "arxiv": "1904.05767",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "corona2020ganhand",
+  "title": "GANHand: Predicting Human Grasp Affordances in Multi-Object Scenes",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "baek2020pushing",
+  "title": "Pushing the Envelope for RGB-based Dense 3D Hand Pose Estimation via Neural Rendering",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [
+   "Seungryul Baek",
+   "Kwang In Kim",
+   "Tae-Kyun Kim"
+  ],
+  "arxiv": "1904.04196v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "moon2020i2lmeshnet",
+  "title": "I2L-MeshNet: Image-to-Lixel Prediction Network for Accurate 3D Human Pose and Mesh Estimation from a Single RGB Image",
+  "year": 2020,
+  "venue": "ECCV",
+  "authors": [
+   "Gyeongsik Moon",
+   "Kyoung Mu Lee"
+  ],
+  "arxiv": "2008.03713v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "lin2021meshgraphormer",
+  "title": "Mesh Graphormer",
+  "year": 2021,
+  "venue": "ICCV",
+  "authors": [
+   "Kevin Lin",
+   "Lijuan Wang",
+   "Zicheng Liu"
+  ],
+  "arxiv": "2104.00272v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "hampali2020honnotate",
+  "title": "HOnnotate: A method for 3D Annotation of Hand and Object Poses",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [
+   "Shreyas Hampali",
+   "Mahdi Rad",
+   "Markus Oberweger",
+   "Vincent Lepetit"
+  ],
+  "arxiv": "1907.01481v6",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "rong2021frankmocap",
+  "title": "FrankMocap: A Monocular 3D Whole-Body Pose Estimation System via Regression and Integration",
+  "year": 2021,
+  "venue": "ICCV",
+  "authors": [
+   "Yu Rong",
+   "Takaaki Shiratori",
+   "Kripasindhu Sarkar",
+   "Hanbyul Joo"
+  ],
+  "arxiv": "2010.08244",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "pavlakos2021pymaf",
+  "title": "PyMAF: 3D Human Pose and Shape Regression with Pyramidal Mesh Alignment Feedback Loop",
+  "year": 2021,
+  "venue": "ICCV",
+  "authors": [
+   "Zhang, Hongwen",
+   "Tian, Yating",
+   "Zhou, Xinchi",
+   "Ouyang, Wanli",
+   "Liu, Yebin",
+   "Wang, Limin",
+   "Sun, Zhenan"
+  ],
+  "arxiv": "2103.16507",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "yang2022artiboost",
+  "title": "ArtiBoost: Boosting Articulated 3D Hand-Object Pose Estimation via Online Exploration and Synthesis",
+  "year": 2022,
+  "venue": "CVPR",
+  "authors": [
+   "Kailin Li",
+   "Lixin Yang",
+   "Xinyu Zhan",
+   "Jun Lv",
+   "Wenqiang Xu",
+   "Jiefeng Li",
+   "Cewu Lu"
+  ],
+  "arxiv": "2109.05488v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "pavlakos2023hamer",
+  "title": "Reconstructing Hands in 3D with Transformers",
+  "year": 2023,
+  "venue": "CVPR",
+  "authors": [
+   "Pavlakos, Georgios",
+   "Shan, Dandan",
+   "Radosavovic, Ilija",
+   "Kanazawa, Angjoo",
+   "Fouhey, David",
+   "Malik, Jitendra"
+  ],
+  "arxiv": "2312.05251",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "fan2024manus",
+  "title": "MANUS: Markerless Hand-Object Grasp Capture using Articulated 3D Gaussians",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "2312.02137",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "chao2021dexycb",
+  "title": "DexYCB: A Benchmark for Capturing Hand Grasping of Objects",
+  "year": 2021,
+  "venue": "CVPR",
+  "authors": [
+   "Yu-Wei Chao",
+   "Wei Yang",
+   "Yu Xiang",
+   "Pavlo Molchanov",
+   "Ankur Handa",
+   "Jonathan Tremblay",
+   "Yashraj S. Narang",
+   "Karl Van Wyk",
+   "Umar Iqbal",
+   "Stan Birchfield",
+   "Jan Kautz",
+   "Dieter Fox"
+  ],
+  "arxiv": "2104.04631v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "taheri2020grab",
+  "title": "GRAB: A Dataset of Whole-Body Human Grasping of Objects",
+  "year": 2020,
+  "venue": "CVPR",
+  "authors": [
+   "Omid Taheri",
+   "Nima Ghorbani",
+   "Michael J. Black",
+   "Dimitrios Tzionas"
+  ],
+  "arxiv": "2008.11200v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "wang2023wildhands",
+  "title": "WildHands: 3D Hand Reconstruction in the Wild",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "wang2023hold",
+  "title": "HOLD: Category-agnostic 3D Reconstruction of Interacting Hands and Objects from Video",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [
+   "Zicong Fan",
+   "Maria Parelli",
+   "Maria Eleni Kadoglou",
+   "Muhammed Kocabas",
+   "Xu Chen",
+   "Michael J. Black",
+   "Otmar Hilliges"
+  ],
+  "arxiv": "2311.18448v1",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "li2023hand",
+  "title": "A Survey on 3D Hand Reconstruction",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "chen2024hand",
+  "title": "Hand Pose Estimation: A Survey",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Bardia Doosti"
+  ],
+  "arxiv": "1903.01013v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zuffi2017menagerie",
+  "title": "3D Menagerie: Modeling the 3D Shape and Pose of Animals",
+  "year": 2017,
+  "venue": "CVPR",
+  "authors": [
+   "Zuffi, Silvia",
+   "Kanazawa, Angjoo",
+   "Jacobs, David",
+   "Black, Michael J."
+  ],
+  "arxiv": "1611.07700",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zuffi2019safari",
+  "title": "Three-D Safari: Learning to Estimate Zebra Pose, Shape, and Texture from Images \"In the Wild\"",
+  "year": 2019,
+  "venue": "ICCV",
+  "authors": [
+   "Silvia Zuffi",
+   "Angjoo Kanazawa",
+   "Tanya Berger-Wolf",
+   "Michael J. Black"
+  ],
+  "arxiv": "1908.07201v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zuffi2021smalst",
+  "title": "SMALST: Deep Learning Approach to Non-rigid 3D Shape Estimation",
+  "year": 2019,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "biggs2020dogs",
+  "title": "Who Left the Dogs Out? 3D Animal Reconstruction with Expectation Maximization in the Loop",
+  "year": 2020,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "2004.12989",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "biggs2022barc",
+  "title": "BARC: Breed-Augmented Regression Using Classification for 3D Dog Reconstruction from Images",
+  "year": 2022,
+  "venue": "ECCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "zhang2022animalkingdom",
+  "title": "Animal Kingdom: A Large and Diverse Dataset for Animal Behavior Understanding",
+  "year": 2022,
+  "venue": "ECCV",
+  "authors": [
+   "Ng, Xun Long",
+   "Ong, Kian Eng",
+   "Zheng, Qichen",
+   "Ni, Yun",
+   "Yeo, Si Yong",
+   "Liu, Jun"
+  ],
+  "arxiv": "2205.05677",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "wu2023magicpony",
+  "title": "MagicPony: Learning Articulated 3D Animals in the Wild",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [
+   "Wu, Shangzhe",
+   "Li, Ruining",
+   "Jakab, Tomas",
+   "Rupprecht, Christian",
+   "Vedaldi, Andrea"
+  ],
+  "arxiv": "2303.16160",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "li2023fauna",
+  "title": "3D-Fauna: A Dataset and Benchmark for 3D Animal Reconstruction",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "yao2023imavatar",
+  "title": "I M Avatar: Implicit Morphable Head Avatars from Videos",
+  "year": 2023,
+  "venue": "CVPR",
+  "authors": [
+   "Yufeng Zheng",
+   "Victoria Fernández Abrevaya",
+   "Marcel C. Bühler",
+   "Xu Chen",
+   "Michael J. Black",
+   "Otmar Hilliges"
+  ],
+  "arxiv": "2112.07471v6",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zuffi2024animer",
+  "title": "AniMer: Animal Pose and Shape Estimation Using Learning-based Model Reduction",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "wang2023satr",
+  "title": "Sparse Animal Transformer (SATR)",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "li2024livestock",
+  "title": "LiveStock: A Dataset for 3D Animal Reconstruction",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "huang2023genmo",
+  "title": "Genmo: A Generative Model of 3D Humans",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "wu2024animal",
+  "title": "Animal Reconstruction from Images: A Survey",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "kerbl20233dgs",
+  "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+  "year": 2023,
+  "venue": "SIGGRAPH",
+  "authors": [
+   "Kerbl, Bernhard",
+   "Kopanas, Georgios",
+   "Leimkühler, Thomas",
+   "Drettakis, George"
+  ],
+  "arxiv": "2308.04079",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "mildenhall2020nerf",
+  "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+  "year": 2020,
+  "venue": "ECCV",
+  "authors": [
+   "Mildenhall, Ben",
+   "Srinivasan, Pratul P.",
+   "Tancik, Matthew",
+   "Barron, Jonathan T.",
+   "Ramamoorthi, Ravi",
+   "Ng, Ren"
+  ],
+  "arxiv": "2003.08934",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "poole2023dreamfusion",
+  "title": "DreamFusion: Text-to-3D using 2D Diffusion",
+  "year": 2023,
+  "venue": "ICLR",
+  "authors": [
+   "Poole, Ben",
+   "Jain, Ajay",
+   "Barron, Jonathan T.",
+   "Mildenhall, Ben"
+  ],
+  "arxiv": "2209.14988",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "song2023score",
+  "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+  "year": 2023,
+  "venue": "ICLR",
+  "authors": [
+   "Yang Song",
+   "Jascha Sohl-Dickstein",
+   "Diederik P. Kingma",
+   "Abhishek Kumar",
+   "Stefano Ermon",
+   "Ben Poole"
+  ],
+  "arxiv": "2011.13456v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "ho2020ddpm",
+  "title": "Denoising Diffusion Probabilistic Models",
+  "year": 2020,
+  "venue": "NeurIPS",
+  "authors": [
+   "Ho, Jonathan",
+   "Jain, Ajay",
+   "Abbeel, Pieter"
+  ],
+  "arxiv": "2006.11239",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kingma2014vae",
+  "title": "Auto-Encoding Variational Bayes",
+  "year": 2014,
+  "venue": "ICLR",
+  "authors": [
+   "Kingma, Diederik P",
+   "Welling, Max"
+  ],
+  "arxiv": "1312.6114",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "goodfellow2014gan",
+  "title": "Generative Adversarial Networks",
+  "year": 2014,
+  "venue": "NeurIPS",
+  "authors": [
+   "Goodfellow, Ian J.",
+   "Pouget-Abadie, Jean",
+   "Mirza, Mehdi",
+   "Xu, Bing",
+   "Warde-Farley, David",
+   "Ozair, Sherjil",
+   "Courville, Aaron",
+   "Bengio, Yoshua"
+  ],
+  "arxiv": "1406.2661",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "kirillov2023sam",
+  "title": "Segment Anything",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [
+   "Kirillov, Alexander",
+   "Mintun, Eric",
+   "Ravi, Nikhila",
+   "Mao, Hanzi",
+   "Rolland, Chloe",
+   "Gustafson, Laura",
+   "Xiao, Tete",
+   "Whitehead, Spencer",
+   "Berg, Alexander C.",
+   "Lo, Wan-Yen",
+   "Dollár, Piotr",
+   "Girshick, Ross"
+  ],
+  "arxiv": "2304.02643",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "oquab2024dinov2",
+  "title": "DINOv2: Learning Robust Visual Features without Supervision",
+  "year": 2024,
+  "venue": "TMLR",
+  "authors": [
+   "Oquab, Maxime",
+   "Darcet, Timothée",
+   "Moutakanni, Théo",
+   "Vo, Huy",
+   "Szafraniec, Marc",
+   "Khalidov, Vasil",
+   "Fernandez, Pierre",
+   "Haziza, Daniel",
+   "Massa, Francisco",
+   "El-Nouby, Alaaeldin",
+   "Assran, Mahmoud",
+   "Ballas, Nicolas",
+   "Galuba, Wojciech",
+   "Howes, Russell",
+   "Huang, Po-Yao",
+   "Li, Shang-Wen",
+   "Misra, Ishan",
+   "Rabbat, Michael",
+   "Sharma, Vasu",
+   "Synnaeve, Gabriel",
+   "Xu, Hu",
+   "Jegou, Hervé",
+   "Mairal, Julien",
+   "Labatut, Patrick",
+   "Joulin, Armand",
+   "Bojanowski, Piotr"
+  ],
+  "arxiv": "2304.07193",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "yang2024depthanything",
+  "title": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [],
+  "arxiv": "2401.04398",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "yin2023metric3d",
+  "title": "Metric3D: Towards Zero-shot Metric 3D Prediction from A Single Image",
+  "year": 2023,
+  "venue": "ICCV",
+  "authors": [
+   "Yin, Wei",
+   "Zhang, Chi",
+   "Chen, Hao",
+   "Cai, Zhipeng",
+   "Yu, Gang",
+   "Wang, Kaixuan",
+   "Chen, Xiaozhi",
+   "Shen, Chunhua"
+  ],
+  "arxiv": "2307.10984",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "shen2023gvh",
+  "title": "World-Grounded Human Motion Recovery via Gravity-View Coordinates",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ },
+ {
+  "key": "shin2024wham",
+  "title": "WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion",
+  "year": 2024,
+  "venue": "CVPR",
+  "authors": [
+   "Shin, Soyong",
+   "Kim, Juyong",
+   "Halilaj, Eni",
+   "Black, Michael J."
+  ],
+  "arxiv": "2312.07531",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "yuan2024tram",
+  "title": "TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos",
+  "year": 2024,
+  "venue": "ECCV",
+  "authors": [
+   "Yufu Wang",
+   "Ziyun Wang",
+   "Lingjie Liu",
+   "Kostas Daniilidis"
+  ],
+  "arxiv": "2403.17346v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "caron2021emerging",
+  "title": "Emerging Properties in Self-Supervised Vision Transformers",
+  "year": 2021,
+  "venue": "ICCV",
+  "authors": [
+   "Mathilde Caron",
+   "Hugo Touvron",
+   "Ishan Misra",
+   "Hervé Jégou",
+   "Julien Mairal",
+   "Piotr Bojanowski",
+   "Armand Joulin"
+  ],
+  "arxiv": "2104.14294v2",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "teed2021raft",
+  "title": "RAFT: Recurrent All-Pairs Field Transforms for Optical Flow",
+  "year": 2021,
+  "venue": "ECCV",
+  "authors": [
+   "Zachary Teed",
+   "Jia Deng"
+  ],
+  "arxiv": "2003.12039v3",
+  "doi": "",
+  "have": true
+ },
+ {
+  "key": "zheng2023human",
+  "title": "Human Motion Reconstruction: A Survey",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [],
+  "arxiv": "",
+  "doi": "",
+  "have": false
+ }
+]

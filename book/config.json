@@ -1,0 +1,57 @@
+{
+  "title": "人体参数化技术",
+  "subtitle": "从零基础到前沿：人体 · 人脸 · 人手 · 动物",
+  "author": "Dr. Dezeming",
+  "edition": "2026 年 · 第一版",
+  "front": [
+    "front/titlepage.md",
+    "front/copyright.md",
+    "front/preface.md"
+  ],
+  "parts": [
+    {
+      "no": "第一篇",
+      "title": "第一篇  地基",
+      "subtitle": "在谈论 SMPL 之前，先把数学、几何与形变讲清楚",
+      "page": "front/part1.md",
+      "chapters": ["ch01.md", "ch02.md", "ch03.md", "ch04.md", "ch05.md", "ch06.md"]
+    },
+    {
+      "no": "第二篇",
+      "title": "第二篇  人体",
+      "subtitle": "从 SCAPE 到 SMPL，再到可驱动的神经化身",
+      "page": "front/part2.md",
+      "chapters": ["ch07.md", "ch08.md", "ch09.md", "ch10.md", "ch11.md", "ch12.md", "ch13.md", "ch14.md"]
+    },
+    {
+      "no": "第三篇",
+      "title": "第三篇  人脸",
+      "subtitle": "3DMM、FLAME 与高保真数字人",
+      "page": "front/part3.md",
+      "chapters": ["ch15.md", "ch16.md", "ch17.md", "ch18.md"]
+    },
+    {
+      "no": "第四篇",
+      "title": "第四篇  人手",
+      "subtitle": "21 个关节、MANO 与手物交互",
+      "page": "front/part4.md",
+      "chapters": ["ch19.md", "ch20.md", "ch21.md"]
+    },
+    {
+      "no": "第五篇",
+      "title": "第五篇  动物",
+      "subtitle": "SMAL 与跨物种的四足、鸟类、鱼类参数化",
+      "page": "front/part5.md",
+      "chapters": ["ch22.md", "ch23.md", "ch24.md"]
+    },
+    {
+      "no": "第六篇",
+      "title": "第六篇  前沿与实战",
+      "subtitle": "生成模型、基础模型，以及亲手跑一遍",
+      "page": "front/part6.md",
+      "chapters": ["ch25.md", "ch26.md", "ch27.md"]
+    }
+  ],
+  "appendices": ["appA.md", "appB.md", "appC.md", "appD.md"],
+  "back": ["front/afterword.md"]
+}

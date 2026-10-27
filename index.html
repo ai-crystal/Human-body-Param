@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="《人体参数化技术》——从零基础到前沿：人体 · 人脸 · 人手 · 动物。在线免费阅读，可下载 PDF。">
+  <title>人体参数化技术 · Parametric Human Models</title>
+
+  <!-- docsify 主题 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
+
+  <!-- KaTeX（公式） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    :root { --theme-color: #b45309; }
+    .markdown-section { max-width: 900px; padding-bottom: 60px; }
+    .markdown-section h1 { font-size: 1.9rem; line-height: 1.4; margin: 1.2em 0 .8em; }
+    .markdown-section h2 { font-size: 1.35rem; margin: 1.8em 0 .6em; padding-left: .5em;
+                           border-left: 3px solid var(--theme-color); }
+    .markdown-section h3 { font-size: 1.1rem; margin: 1.4em 0 .5em; }
+    .markdown-section p, .markdown-section li { line-height: 1.85; }
+    .markdown-section blockquote { border-left: 3px solid #d9b48f; background: #fbf7f0;
+                                   padding: .6em 1em; color: #4b5563; }
+    .markdown-section img { max-width: 100%; }
+    .markdown-section figure { margin: 1.4em 0; text-align: center; }
+    .markdown-section figcaption { font-size: .86rem; color: #6b7280; margin-top: .5em; }
+    .markdown-section table { font-size: .9rem; }
+    .markdown-section a.cite { color: #c2410c; font-size: .78em; vertical-align: super; }
+    .markdown-section .ref { font-size: .84rem; line-height: 1.7; text-indent: -2em;
+                             padding-left: 2em; margin-bottom: .4em; }
+    .markdown-section .ref .num { color: #b45309; margin-right: .4em; }
+    /* 与 PDF 版式对齐的辅助类 */
+    .markdown-section .titlepage { text-align: center; padding: 4em 0; }
+    .markdown-section .titlepage h1 { font-size: 2.4rem; letter-spacing: .12em; }
+    .markdown-section .copyright { font-size: .88rem; color: #6b7280; }
+    .markdown-section .part h1 { border: none; padding: 0; }
+    .katex-display { overflow-x: auto; overflow-y: hidden; padding: .2em 0; }
+    .app-nav { margin-right: 12px; }
+
+    /* ---- 封面页：用书籍封面做背景 ---- */
+    section.cover {
+      background-color: #050912 !important;
+      background-image: url(book/images/cover/cover-art.jpg) !important;
+      background-size: cover !important;
+      background-position: 34% 52% !important;
+      background-repeat: no-repeat !important;
+      color: #f3f7fc;
+    }
+    section.cover::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(100deg, rgba(3,8,19,.94) 0%, rgba(3,8,19,.72) 45%,
+                  rgba(3,8,19,.40) 75%, rgba(3,8,19,.30) 100%);
+    }
+    section.cover .cover-main { position: relative; z-index: 1; }
+    section.cover .cover-main h1,
+    section.cover .cover-main h1 a,
+    section.cover .cover-main h1 span { color: #fff !important; letter-spacing: .1em;
+      text-shadow: 0 3px 30px rgba(2,7,16,.95); }
+    section.cover .cover-main blockquote { color: rgba(236,244,255,.92); border-left: none; }
+    section.cover .cover-main p { color: rgba(226,240,252,.86); }
+    section.cover .cover-main > p:last-child a {
+      border-radius: 4px; padding: .7em 2.2em; font-size: 1rem;
+      border: 1px solid rgba(240,192,122,.75); color: #fff;
+      background: rgba(180,83,9,.55); transition: background .2s;
+    }
+    section.cover .cover-main > p:last-child a:hover { background: rgba(180,83,9,.9); }
+  </style>
+</head>
+<body>
+  <div id="app">正在加载…</div>
+
+  <script>
+    window.$docsify = {
+      name: '人体参数化技术',
+      nameLink: '/',
+      homepage: 'README.md',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      coverpage: true,
+      onlyCover: false,
+      relativePath: true,
+      alias: { '.*/_sidebar.md': '/_sidebar.md' },
+      auto2top: true,
+      maxLevel: 3,
+      executeScript: false,
+      search: {
+        placeholder: '搜索本书…',
+        noData: '没有找到结果',
+        depth: 3,
+        paths: ['/', '/book/chapters/', '/book/front/', '/book/appendix/']
+      },
+      pagination: {
+        previousText: '上一章',
+        nextText: '下一章',
+        crossChapter: true,
+        crossChapterText: true
+      },
+      copyCode: {
+        buttonText: '复制',
+        errorText: '复制失败',
+        successText: '已复制'
+      },
+      mermaid: { theme: 'default' },
+      // KaTeX：文档渲染完成后对正文调用 auto-render
+      plugins: [
+        function (hook, vm) {
+          // 正文里的图片写 ../images/NN/xxx.png（保证 GitHub 网页端直接看 md 也能显示），
+          // 在 docsify 里改写成站点根下的绝对路径。
+          hook.afterEach(function (html) {
+            var base = new URL('.', location.href).pathname;   // '/' 或 '/<repo>/'
+            html = html.replace(/(src=")\.\.\/images\//g, '$1' + base + 'book/images/');
+            // [@key] / [@a,@b] -> 上标编号，点击跳到附录 D 对应条目
+            html = html.replace(/\[@([A-Za-z0-9_,;\s]+)\]/g, function (_, keys) {
+              var map = window.CITES || {};
+              var parts = keys.split(/[,;]\s*/).map(function (k) {
+                k = k.trim();
+                var it = map[k];
+                if (!it) return k;
+                return '<a class="cite" href="#/book/appendix/appD?id=ref-' + it.n + '">[' + it.n + ']</a>';
+              });
+              return parts.join('');
+            });
+            return html;
+          });
+          hook.doneEach(function () {
+            var el = document.querySelector('.markdown-section');
+            if (!el || typeof renderMathInElement !== 'function') return;
+            renderMathInElement(el, {
+              delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '\\[', right: '\\]', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false }
+              ],
+              ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'option'],
+              throwOnError: false,
+              macros: {
+                '\\RR': '\\mathbb{R}',
+                '\\bm': '\\boldsymbol{#1}',
+                '\\T': '^{\\top}'
+              }
+            });
+          });
+        }
+      ]
+    };
+  </script>
+
+  <!-- 引用编号表（gen_appendix.py 生成） -->
+  <script src="book/build/cites.js"></script>
+
+  <!-- docsify 本体与插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2/dist/docsify-mermaid.js"></script>
+</body>
+</html>
