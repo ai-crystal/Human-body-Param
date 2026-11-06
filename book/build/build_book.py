@@ -201,8 +201,12 @@ def protect_math(text):
 
 
 def restore_math(html_text, box):
+    def esc_math(s):
+        # 公式里的 & < > 会被浏览器当成实体/标签，先转义；KaTeX 取 textContent 时仍是原字符
+        return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
     for i, m in enumerate(box):
-        html_text = html_text.replace(f"@@MATH{i}@@", m)
+        html_text = html_text.replace(f"@@MATH{i}@@", esc_math(m))
     return html_text
 
 
