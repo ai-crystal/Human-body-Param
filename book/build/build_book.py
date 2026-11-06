@@ -30,8 +30,16 @@ APP = os.path.join(BOOK, "appendix")
 IMG = os.path.join(BOOK, "images")
 OUT = os.path.join(ROOT, "output")
 REFS = os.path.join(HERE, "refs.json")
-MATHJAX = os.path.join(HERE, "assets", "tex-svg-full.js")
-MATHJAX_URI = "file:///" + MATHJAX.replace(os.sep, "/")
+KATEX_DIR = os.path.join(HERE, "assets", "katex")
+MATHJAX_URI = "file:///" + os.path.join(HERE, "assets", "tex-svg-full.js").replace(os.sep, "/")
+
+
+def katex_uri(name):
+    return "file:///" + os.path.join(KATEX_DIR, name).replace(os.sep, "/")
+
+
+# KaTeX 宏表（注意：HTML 里必须是双反斜杠，JS 运行时才是单反斜杠）
+KATEX_MACROS_JS = r'{"\\RR": "\\mathbb{R}", "\\bm": "\\boldsymbol{#1}"}'
 
 # 构建中间产物：私有目录优先，公开仓库回落到 book/.build（已 gitignore）
 WORK = os.path.join(ROOT, "_private", "build") if os.path.isdir(os.path.join(ROOT, "_private")) \
@@ -42,6 +50,8 @@ os.makedirs(OUTDIR, exist_ok=True)
 
 CFG = json.load(open(os.path.join(BOOK, "config.json"), encoding="utf-8"))
 PDF_NAME = "parametric-human-models.pdf"
+# 允许用环境变量把成书先写到别处（PDF 被阅读器占用时不影响构建）
+PDF_PATH = os.environ.get("PDF_OUT") or os.path.join(OUTDIR, PDF_NAME)
 COVER_FRONT = os.path.join(IMG, "cover", "cover_front.jpg")
 COVER_BACK = os.path.join(IMG, "cover", "cover_back.jpg")
 
@@ -386,9 +396,11 @@ code{ font-family:"Cascadia Mono","Consolas",monospace; font-size:8.6pt; backgro
   padding:0 1mm; border-radius:2pt; }
 pre code{ background:none; padding:0; font-size:inherit; }
 
-/* ---------- 公式 ---------- */
-mjx-container{ font-size:100% !important; }
-mjx-container[display="true"]{ margin:3.2mm 0 !important; }
+/* ---------- 公式（KaTeX，文本型，可复制/可搜索） ---------- */
+.katex{ font-size:1.02em; }
+.katex-display{ margin:3.2mm 0 !important; page-break-inside:avoid; }
+.katex .base{ white-space:nowrap; }
+.katex-error{ color:#b91c1c !important; }
 
 /* ---------- 引用与参考文献 ---------- */
 a.cite{ color:var(--accent2); font-family:"Microsoft YaHei",sans-serif; font-size:7.8pt;
@@ -492,21 +504,32 @@ def build_html(pagemap=None):
     html_doc = f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <title>{esc(CFG['title'])}</title>
+<link rel="stylesheet" href="{katex_uri('katex.min.css')}">
+<script src="{katex_uri('katex.min.js')}"></script>
+<script src="{katex_uri('auto-render.min.js')}"></script>
 <script>
-window.MathJax = {{
-  tex: {{ inlineMath: [['$','$']], displayMath: [['$$','$$']], tags: 'none',
-          macros: {{ RR: '\\\\mathbb{{R}}', bm: ['\\\\boldsymbol{{#1}}',1], T: '^\\\\top' }} }},
-  svg: {{ fontCache: 'global', scale: 0.98 }},
-  options: {{ enableMenu: false }},
-  startup: {{
-    ready() {{
-      MathJax.startup.defaultReady();
-      MathJax.startup.promise.then(() => {{ window.__mjdone = true; }});
-    }}
+window.addEventListener('load', function () {{
+  try {{
+    renderMathInElement(document.body, {{
+      delimiters: [
+        {{ left: '$$', right: '$$', display: true }},
+        {{ left: '$',  right: '$',  display: false }}
+      ],
+      ignoredTags: ['script','noscript','style','textarea','pre','code','option'],
+      throwOnError: false,
+      errorColor: '#cc0000',
+      strict: 'ignore',
+      macros: {KATEX_MACROS_JS}
+    }});
+  }} catch (e) {{
+    console.error('katex render failed', e);
   }}
-}};
+  var errs = Array.prototype.map.call(document.querySelectorAll('.katex-error'),
+                                     function (el) {{ return el.getAttribute('title') || el.textContent; }});
+  window.__katexerrs = errs;
+  document.fonts.ready.then(function () {{ window.__katexd = true; }});
+}});
 </script>
-<script src="{MATHJAX_URI}" id="MathJax-script"></script>
 <style>{CSS}</style>
 </head><body>
 {body_html}
@@ -534,7 +557,12 @@ def render_pdf(html_path, pdf_path):
             raise RuntimeError("找不到可用浏览器：请安装 Chrome 或 Edge。")
         pg = b.new_page()
         pg.goto(url, wait_until="load", timeout=240000)
-        pg.wait_for_function("window.__mjdone === true", timeout=240000)
+        pg.wait_for_function("window.__katexd === true", timeout=240000)
+        errs = pg.evaluate("window.__katexerrs || []")
+        if errs:
+            print("  ! KaTeX 渲染失败 %d 处：" % len(errs))
+            for e in errs[:10]:
+                print("    ", str(e)[:120])
         pg.wait_for_function(
             "Promise.all(Array.from(document.images).map(i => i.complete ? 1 : new Promise(r => {i.onload=r;i.onerror=r;}))).then(()=>true)",
             timeout=180000)
@@ -669,7 +697,7 @@ def build_once(quality, max_w=1400):
     body_pdf = os.path.join(WORK, "_body.pdf")
     render_pdf(html_path, body_pdf)
     pm2 = read_pagemap(body_pdf)
-    target = os.path.join(OUTDIR, PDF_NAME)
+    target = PDF_PATH
     add_covers(body_pdf, target)
     decorate(target, {k: v + 1 for k, v in pm2.items()}, parts, apps, HEADINGS)
     finalize(target)
