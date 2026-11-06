@@ -38,25 +38,6 @@ def fig_rotation():
     fs.save(fig, "ch04", "fig04-01")
 
 
-def fig_axis_angle():
-    fig, axs = plt.subplots(1, 3, figsize=(6.9, 2.6),
-                            subplot_kw={"projection": "3d"})
-    titles = ["绕 z 轴转", "绕 x 轴转", "绕任意轴 n 转"]
-    axes = [(2, 0.9), (0, 1.2), (1, 0.8)]
-    for ax, title, (which, ang) in zip(axs, titles, axes):
-        ax.set_title(title, fontsize=9.5, pad=0)
-        ax.set_xlim(-1, 1); ax.set_ylim(-1, 1); ax.set_zlim(-1, 1)
-        ax.set_axis_off()
-        ax.quiver(0, 0, 0, 1, 0, 0, color="#9CA3AF", arrow_length_ratio=0.12, lw=1)
-        ax.quiver(0, 0, 0, 0, 1, 0, color="#9CA3AF", arrow_length_ratio=0.12, lw=1)
-        ax.quiver(0, 0, 0, 0, 0, 1, color="#9CA3AF", arrow_length_ratio=0.12, lw=1)
-        R = _rot_axis(np.eye(3)[which], ang)
-        v = R @ np.array([0.9, 0.35, 0.55])
-        ax.quiver(0, 0, 0, *v, color=fs.ACCENT, arrow_length_ratio=0.12, lw=2)
-        ax.quiver(0, 0, 0, *np.eye(3)[which], color=fs.BLUE, arrow_length_ratio=0.14, lw=2.2)
-    fig.tight_layout()
-    fs.save(fig, "ch04", "fig04-02")
-
 
 def _rot_axis(n, a):
     n = np.asarray(n, float); n = n / np.linalg.norm(n)
@@ -97,7 +78,7 @@ def fig_pinhole():
     fs.label(ax, 0.5, 0.44, "焦距 $f$", fs=8.8, color=fs.BLUE, va="top")
     fs.label(ax, 0.05, 3.45, "针孔相机（侧视图）：三维点沿光线压到像平面，深度 $Z$ 越大，像越小",
              fs=9.6, ha="left", color=fs.INK)
-    fs.save(fig, "ch04", "fig04-03")
+    fs.save(fig, "ch04", "fig04-02")
 
 
 def fig_mesh():
@@ -120,11 +101,10 @@ def fig_mesh():
     fs.label(ax, 0.86, 0.54, "法线 $\\mathbf{n}$", fs=9, color=fs.GREEN)
     ax.set_xlim(0, 1.15); ax.set_ylim(0, 1.0)
     ax.set_title("三角网格：顶点 + 边 + 面；每个面有朝向，每个顶点可带法线", fontsize=9.8)
-    fs.save(fig, "ch04", "fig04-04")
+    fs.save(fig, "ch04", "fig04-03")
 
 
 if __name__ == "__main__":
     fig_rotation()
-    fig_axis_angle()
     fig_pinhole()
     fig_mesh()

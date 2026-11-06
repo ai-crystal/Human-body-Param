@@ -158,7 +158,13 @@ def prepare_images(quality=82, max_w=1400):
     for src in sorted(set(files)):
         rel = os.path.relpath(src, IMG).replace("\\", "/")
         stem = re.sub(r"[^0-9A-Za-z]+", "-", rel)[:60]
-        tag = hashlib.md5(f"{rel}|{quality}|{max_w}".encode()).hexdigest()[:8]
+        # 把文件大小与修改时间也算进缓存键：图片内容变了（即使路径不变）必须重新压
+        try:
+            st = os.stat(src)
+            stamp = f"{st.st_size}|{int(st.st_mtime)}"
+        except OSError:
+            stamp = "0|0"
+        tag = hashlib.md5(f"{rel}|{quality}|{max_w}|{stamp}".encode()).hexdigest()[:8]
         dst = os.path.join(cache, f"{stem}-q{quality}-{tag}.jpg")
         if not os.path.exists(dst):
             try:
