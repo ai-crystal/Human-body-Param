@@ -2112,5 +2112,45 @@
   "arxiv": "",
   "doi": "",
   "have": false
+ },
+ {
+  "title": "ATLAS: Decoupling Skeletal and Shape Parameters for Expressive Parametric Human Modeling",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Jinhyung Park",
+   "Javier Romero",
+   "Shunsuke Saito",
+   "Fabian Prada",
+   "Takaaki Shiratori",
+   "Yichen Xu",
+   "Federica Bogo",
+   "Shoou-I Yu",
+   "Kris Kitani",
+   "Rawal Khirodkar"
+  ],
+  "arxiv": "2508.15767",
+  "doi": "",
+  "have": true,
+  "key": "park2025atlas"
+ },
+ {
+  "title": "MHR: Momentum Human Rig",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Aaron Ferguson",
+   "Ahmed A. A. Osman",
+   "Berta Bescos",
+   "Carsten Stoll",
+   "Chris Twigg",
+   "Christoph Lassner",
+   "Federica Bogo",
+   "Javier Romero"
+  ],
+  "arxiv": "2511.15586",
+  "doi": "",
+  "have": true,
+  "key": "ferguson2025mhr"
  }
 ]

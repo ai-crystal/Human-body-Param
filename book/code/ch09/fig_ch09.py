@@ -11,7 +11,8 @@ def fig_timeline():
     fig, ax = fs.canvas(6.9, 2.6)
     ax.set_xlim(0, 1); ax.set_ylim(0, 1)
     items = [(2015, "SMPL\n身体"), (2017, "SMPL+H\n+ 手"), (2019, "SMPL-X\n+ 脸"),
-             (2020, "STAR\n稀疏关节"), (2020, "GHUM\n连续尺度")]
+             (2020, "STAR / GHUM\n稀疏关节 / 连续尺度"),
+             (2025, "ATLAS / MHR\n骨架与形状解耦")]
     fs.timeline(ax, items, y=0.50)
     fs.save(fig, "ch09", "fig09-01")
 
