@@ -701,10 +701,21 @@ def build_once(quality, max_w=1400):
     body_pdf = os.path.join(WORK, "_body.pdf")
     render_pdf(html_path, body_pdf)
     pm2 = read_pagemap(body_pdf)
+
+    def emit(path):
+        add_covers(body_pdf, path)
+        decorate(path, {k: v + 1 for k, v in pm2.items()}, parts, apps, HEADINGS)
+        finalize(path)
+
     target = PDF_PATH
-    add_covers(body_pdf, target)
-    decorate(target, {k: v + 1 for k, v in pm2.items()}, parts, apps, HEADINGS)
-    finalize(target)
+    try:
+        emit(target)
+    except PermissionError:
+        # 目标 PDF 正被阅读器打开，改写到 *-new.pdf（不污染仓库提交）
+        alt = os.path.splitext(target)[0] + "-new.pdf"
+        print("  ! 目标 PDF 被占用，改写为:", alt)
+        emit(alt)
+        target = alt
     for f in (pass1, body_pdf):
         try:
             os.remove(f)
