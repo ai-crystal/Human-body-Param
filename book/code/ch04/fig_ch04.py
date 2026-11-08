@@ -46,38 +46,59 @@ def _rot_axis(n, a):
 
 
 def fig_pinhole():
-    fig, ax = plt.subplots(figsize=(6.6, 3.2))
-    ax.set_xlim(0, 3.9); ax.set_ylim(0, 3.7)
+    fig, ax = plt.subplots(figsize=(6.6, 3.3))
+    ax.set_xlim(-0.35, 4.05); ax.set_ylim(-0.55, 3.75)
     ax.set_aspect("equal"); ax.axis("off")
-    # 相机
-    ax.add_patch(Circle((0, 0.2), 0.05, color=fs.INK, zorder=5))
-    fs.label(ax, 0.0, 0.02, "光心 O", fs=9, va="top")
+
+    OY = 0.20          # 光轴高度
+    F = 1.00           # 焦距（像平面到光心的水平距离）
+    X, Z = 2.70, 2.60  # 三维点的水平位置与高度
+
+    # 光心（留出左边距，避免圆点被裁掉）
+    ax.add_patch(Circle((0, OY), 0.055, color=fs.INK, zorder=6))
+    fs.label(ax, 0.0, OY - 0.10, "光心 $O$", fs=9, va="top")
+
     # 光轴
-    ax.plot([0, 3.6], [0.2, 0.2], color="#D1D5DB", lw=0.9, ls=":")
+    ax.plot([-0.25, 3.75], [OY, OY], color="#C9CDD3", lw=0.9, ls=":")
+
     # 像平面
-    ax.plot([1.0, 1.0], [0.2, 1.75], color=fs.BLUE, lw=2.2)
-    fs.label(ax, 0.98, 1.9, "像平面", fs=9, color=fs.BLUE, ha="right")
-    # 三维点
-    X, Z = 2.7, 2.6
-    ax.plot([0, X], [0.2, Z], color=fs.MUTED, lw=1.1, ls="--")
-    ax.plot([X, X], [0.2, Z], color="#D1D5DB", lw=0.8, ls=":")
-    ax.plot([X, 0], [0.2, 0.2], color="#D1D5DB", lw=0.8, ls=":")
-    ax.scatter([X], [Z], s=32, color=fs.ACCENT, zorder=5)
-    fs.label(ax, X + 0.10, Z, "三维点 $(Y,Z)$", fs=9.2, ha="left", color=fs.ACCENT)
-    xi = 1.0 * X / Z
-    ax.scatter([1.0], [0.2 + xi], s=26, color=fs.ACCENT, zorder=5)
-    fs.label(ax, 1.06, 0.2 + xi + 0.16, "像点 $y=fY/Z$", fs=8.8, ha="left", color=fs.ACCENT)
-    ax.annotate("", xy=(X, 0.08), xytext=(0, 0.08),
-                arrowprops=dict(arrowstyle="<->", color=fs.MUTED, lw=0.9))
-    fs.label(ax, X / 2, -0.02, "$Z$（深度）", fs=8.8, color=fs.MUTED, va="top")
-    ax.annotate("", xy=(3.55, 0.2), xytext=(3.55, Z),
-                arrowprops=dict(arrowstyle="<->", color=fs.MUTED, lw=0.9))
-    fs.label(ax, 3.64, Z / 2, "$Y$", fs=9, color=fs.MUTED, ha="left")
-    ax.annotate("", xy=(1.0, 0.55), xytext=(0, 0.55),
+    ax.plot([F, F], [OY, 1.85], color=fs.BLUE, lw=2.2, zorder=4)
+    fs.label(ax, F - 0.05, 1.95, "像平面", fs=9, color=fs.BLUE, ha="right")
+
+    # 三维点与光线
+    ax.plot([0, X], [OY, Z], color=fs.MUTED, lw=1.1, ls="--", zorder=2)
+    ax.plot([X, X], [OY, Z], color="#D1D5DB", lw=0.8, ls=":")
+    ax.plot([0, X], [OY, OY], color="#D1D5DB", lw=0.8, ls=":")
+    ax.scatter([X], [Z], s=34, color=fs.ACCENT, zorder=6)
+    fs.label(ax, X + 0.10, Z + 0.06, "三维点 $(Y,Z)$", fs=9.2, ha="left",
+             va="bottom", color=fs.ACCENT)
+
+    # 像点：光线与像平面的交点（y = f·Y/Z）
+    y_img = OY + (Z - OY) * F / X
+    ax.scatter([F], [y_img], s=28, color=fs.ACCENT, zorder=6)
+    fs.label(ax, F + 0.08, y_img - 0.16, "像点 $y=fY/Z$", fs=8.8, ha="left",
+             va="top", color=fs.ACCENT)
+
+    # 焦距 f：贴在光轴上方（避开光心标签与光线）
+    yf = OY + 0.075
+    ax.annotate("", xy=(F, yf), xytext=(0, yf),
                 arrowprops=dict(arrowstyle="<->", color=fs.BLUE, lw=1.0))
-    fs.label(ax, 0.5, 0.44, "焦距 $f$", fs=8.8, color=fs.BLUE, va="top")
-    fs.label(ax, 0.05, 3.45, "针孔相机（侧视图）：三维点沿光线压到像平面，深度 $Z$ 越大，像越小",
-             fs=9.6, ha="left", color=fs.INK)
+    fs.label(ax, F / 2, yf + 0.025, "焦距 $f$", fs=8.8, color=fs.BLUE, va="bottom")
+
+    # 深度 Z：再往下一层
+    yz = OY - 0.40
+    ax.annotate("", xy=(X, yz), xytext=(0, yz),
+                arrowprops=dict(arrowstyle="<->", color=fs.MUTED, lw=0.9))
+    fs.label(ax, X / 2, yz - 0.04, "$Z$（深度）", fs=8.8, color=fs.MUTED, va="top")
+
+    # 高度 Y
+    ax.annotate("", xy=(3.55, OY), xytext=(3.55, Z),
+                arrowprops=dict(arrowstyle="<->", color=fs.MUTED, lw=0.9))
+    fs.label(ax, 3.64, (OY + Z) / 2, "$Y$", fs=9, color=fs.MUTED, ha="left")
+
+    fs.label(ax, -0.30, 3.55,
+             "针孔相机（侧视图）：三维点沿光线压到像平面，深度 $Z$ 越大，像越小",
+             fs=9.4, ha="left", color=fs.INK)
     fs.save(fig, "ch04", "fig04-02")
 
 
