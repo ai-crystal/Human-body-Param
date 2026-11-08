@@ -85,7 +85,7 @@ def fig_lbs_vs_dqs():
     ax.legend(fontsize=8.0, frameon=False, loc="lower right")
     ax.tick_params(labelsize=7.8)
     fig.tight_layout(pad=0.5)
-    fs.save(fig, "ch05", "fig05-05")
+    fs.save(fig, "ch05", "fig05-06")
 
 
 if __name__ == "__main__":
