@@ -2152,5 +2152,20 @@
   "doi": "",
   "have": true,
   "key": "ferguson2025mhr"
+ },
+ {
+  "key": "kavan2008dqs",
+  "title": "Geometric Skinning with Approximate Dual Quaternion Blending",
+  "year": 2008,
+  "venue": "ACM TOG",
+  "arxiv": "",
+  "doi": "10.1145/1409625.1409627",
+  "authors": [
+   "Ladislav Kavan",
+   "Steven Collins",
+   "Jiří Žára",
+   "Carol O'Sullivan"
+  ],
+  "have": false
  }
 ]
