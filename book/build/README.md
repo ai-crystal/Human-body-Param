@@ -39,4 +39,6 @@ python make_covers.py      # 仅在需要改封面时运行
 - 正文里的图片写成 `../images/NN/xxx.png`：这样 GitHub 网页端直接点开 md 也能显示；PDF 构建时会临时把它们替换成本机压缩后的 JPEG。
 - 附录 C/D 的表格是**写进 md 文件**的（不是构建时替换的），因为网页端读的是同一份 md。
 - 引用的编号按全书首次出现顺序自动生成；改完正文引用后务必重跑 `gen_appendix.py`，否则编号与附录 D 不符。
+- **PDF 被占用时**（例如正在阅读器里打开）：构建不会失败，而是把成书写到 `output/parametric-human-models-new.pdf` 并给出提示；
+  关掉阅读器后把它改名覆盖旧文件即可。`编译PDF.bat` 也会自动打开这个新文件。
 - PDF 体积控制：插图 `max_w=1400、JPEG q=82`；若超过 20 MB，`build_book.py` 会自动降到 74/66/58 重建。

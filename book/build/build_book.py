@@ -673,7 +673,14 @@ def add_covers(body_pdf, out_pdf):
     tmp = out_pdf + ".new"
     doc.save(tmp, garbage=3, deflate=True)
     doc.close(); body.close()
-    atomic_replace(tmp, out_pdf)  # Windows 下直接覆盖已存在的 PDF 可能被占用
+    try:
+        atomic_replace(tmp, out_pdf)  # Windows 下直接覆盖已存在的 PDF 可能被占用
+    except PermissionError:
+        try:
+            os.remove(tmp)            # 失败时别留 9MB 的中间文件
+        except OSError:
+            pass
+        raise
     print("covers merged ->", out_pdf)
 
 
@@ -719,6 +726,12 @@ def build_once(quality, max_w=1400):
     except PermissionError:
         # 目标 PDF 正被阅读器打开，改写到 *-new.pdf（不污染仓库提交）
         alt = os.path.splitext(target)[0] + "-new.pdf"
+        for stray in (target + ".new", target + ".tmp"):
+            try:
+                if os.path.exists(stray):
+                    os.remove(stray)
+            except OSError:
+                pass
         print("  ! 目标 PDF 被占用，改写为:", alt)
         emit(alt)
         target = alt
