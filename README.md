@@ -18,12 +18,12 @@
 |---|---|---|---|---|---|
 | **入门册** | 只讲概念：参数化在做什么、参数从哪来、人怎么动、怎么从照片反推 | 5 | 35 | [阅读](books/intro/chapters/ch01.md) | <a href="output/php-intro.pdf" target="_blank" rel="noopener">下载</a> |
 | **数学册** | 向量与矩阵 · 最小二乘 · 概率与 PCA/SVD · 三维表示与旋转 · LBS 与 DQS · 统计形状模型 · 李群与位姿优化 | 7 | 99 | [阅读](books/math/chapters/ch01.md) | <a href="output/php-math.pdf" target="_blank" rel="noopener">下载</a> |
-| **人体册** | SCAPE · SMPL 逐项拆公式 · SMPL 家族（STAR / ATLAS / MHR） | 3 | 34 | [阅读](books/body/chapters/ch01.md) | <a href="output/php-body.pdf" target="_blank" rel="noopener">下载</a> |
+| **人体册** | SCAPE · SMPL 逐项拆公式 · SMPL 家族（STAR / ATLAS / MHR）· SMPL 的训练与评估 | 4 | 52 | [阅读](books/body/chapters/ch01.md) | <a href="output/php-body.pdf" target="_blank" rel="noopener">下载</a> |
 | **重建册** | 优化法与回归法 · 视频与多人 · 数据集与评估 · 着装与神经渲染 · 动作生成 | 5 | 45 | [阅读](books/recon/chapters/ch01.md) | <a href="output/php-recon.pdf" target="_blank" rel="noopener">下载</a> |
 | **脸手册** | 3DMM 与 BFM · FLAME · 高保真细节 · 驱动与头像 · MANO · 单手重建 · 手物交互 | 7 | 69 | [阅读](books/face-hand/chapters/ch01.md) | <a href="output/php-face-hand.pdf" target="_blank" rel="noopener">下载</a> |
 | **前沿册** | SMAL 与动物重建 · 跨物种 · 扩散与 3DGS · 人体基础模型 · 研究脉络 | 5 | 49 | [阅读](books/frontier/chapters/ch01.md) | <a href="output/php-frontier.pdf" target="_blank" rel="noopener">下载</a> |
 
-共 331 页，合计约 20 MB。
+共 349 页，合计约 21 MB。
 
 ## 怎么读
 

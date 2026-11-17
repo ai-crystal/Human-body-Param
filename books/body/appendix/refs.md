@@ -14,4 +14,5 @@
 <div class="ref" id="ref-9"><span class="num">[9]</span>Jinhyung Park, Javier Romero, Shunsuke Saito, et al. <i>ATLAS: Decoupling Skeletal and Shape Parameters for Expressive Parametric Human Modeling</i>. <span class="venue">arXiv, 2025.</span> arXiv:2508.15767</div>
 <div class="ref" id="ref-10"><span class="num">[10]</span>Aaron Ferguson, Ahmed A. A. Osman, Berta Bescos, et al. <i>MHR: Momentum Human Rig</i>. <span class="venue">arXiv, 2025.</span> arXiv:2511.15586</div>
 <div class="ref" id="ref-11"><span class="num">[11]</span>Pavlakos, Georgios, Choutas, Vasileios, Ghorbani, Nima, et al. <i>Expressive Body Capture: 3D Hands, Face, and Body from a Single Image</i>. <span class="venue">CVPR, 2019.</span> arXiv:1904.05866</div>
+<div class="ref" id="ref-12"><span class="num">[12]</span>Bogo, Federica, Kanazawa, Angjoo, Lassner, Christoph, et al. <i>Keep It SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image</i>. <span class="venue">ECCV, 2016.</span> arXiv:1607.08128</div>
 <!--/REFS-->
