@@ -1,9 +1,10 @@
 # 本地私有资料：写作规范、大纲、论文库、原始素材、Agent 记录 —— 不进仓库
 _private/
+_private/legacy/
 
 # 构建中间产物
-book/.build/
-book/build/__pycache__/
+books/.build/
+books/build/__pycache__/
 **/__pycache__/
 *.pyc
 *.tmp

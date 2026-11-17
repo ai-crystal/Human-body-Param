@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta name="description" content="《人体参数化技术》——从零基础到前沿：人体 · 人脸 · 人手 · 动物。在线免费阅读，可下载 PDF。">
-  <title>人体参数化技术 · Parametric Human Models</title>
+  <meta name="description" content="《人体参数化技术》系列（六册）——入门篇 + 数学 / 人体 / 重建 / 人脸与人手 / 前沿五个专业篇。在线免费阅读，可下载 PDF。">
+  <title>人体参数化技术 · Parametric Human Models（六册）</title>
 
   <!-- docsify 主题 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
@@ -43,7 +43,7 @@
     /* ---- 封面页：用书籍封面做背景 ---- */
     section.cover {
       background-color: #050912 !important;
-      background-image: url(book/images/cover/cover-art.jpg) !important;
+      background-image: url(books/intro/images/cover-art.jpg) !important;
       background-size: cover !important;
       background-position: 34% 52% !important;
       background-repeat: no-repeat !important;
@@ -84,7 +84,7 @@
     }, true);
 
     window.$docsify = {
-      name: '人体参数化技术',
+      name: '人体参数化技术 · 六册',
       nameLink: '/',
       homepage: 'README.md',
       loadSidebar: true,
@@ -99,7 +99,7 @@
         placeholder: '搜索本书…',
         noData: '没有找到结果',
         depth: 3,
-        paths: ['/', '/book/chapters/', '/book/front/', '/book/appendix/']
+        paths: ['/', '/books/']
       },
       pagination: {
         previousText: '上一章',
@@ -120,18 +120,23 @@
           // 在 docsify 里改写成站点根下的绝对路径。
           hook.afterEach(function (html) {
             var base = new URL('.', location.href).pathname;   // '/' 或 '/<repo>/'
-            html = html.replace(/(src=")\.\.\/images\//g, '$1' + base + 'book/images/');
+            // 正文里的图写 ../images/NN/x.png（保证 GitHub 网页端直接看 md 也能显示），
+            // docsify 里要改写成当前册的 books/<册>/images/NN/x.png
+            var m = location.hash.match(/books\/([^\/]+)\//);
+            var book = m ? m[1] : 'intro';
+            html = html.replace(/(src=")\.\.\/images\//g, '$1' + base + 'books/' + book + '/images/');
             // docsify 会把相对链接统一改写成 hash 路由；.pdf/.zip 这类静态文件要改回真实地址
             html = html.replace(/href="#\/([^"#]+\.(?:pdf|zip|png|jpe?g|gif|svg|json|txt|csv|md\?raw=1))"/gi,
               function (_, p) { return 'href="' + base + p + '" target="_blank" rel="noopener"'; });
-            // [@key] / [@a,@b] -> 上标编号，点击跳到附录 D 对应条目
+            // [@key] / [@a,@b] -> 上标编号，点击跳到本册参考文献对应条目
             html = html.replace(/\[@([A-Za-z0-9_,;\s]+)\]/g, function (_, keys) {
-              var map = window.CITES || {};
+              var all = window.CITES_BY_BOOK || {};
+              var map = all[book] || {};
               var parts = keys.split(/[,;]\s*/).map(function (k) {
                 k = k.trim();
                 var it = map[k];
                 if (!it) return k;
-                return '<a class="cite" href="#/book/appendix/appD?id=ref-' + it.n + '">[' + it.n + ']</a>';
+                return '<a class="cite" href="#/books/' + book + '/appendix/refs?id=ref-' + it.n + '">[' + it.n + ']</a>';
               });
               return parts.join('');
             });
@@ -167,7 +172,7 @@
   </script>
 
   <!-- 引用编号表（gen_appendix.py 生成） -->
-  <script src="book/build/cites.js"></script>
+  <script src="books/build/cites.js"></script>
 
   <!-- docsify 本体与插件 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>

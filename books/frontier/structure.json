@@ -1,0 +1,30 @@
+{
+  "front": [
+    "front/titlepage.md",
+    "front/copyright.md",
+    "front/preface.md"
+  ],
+  "parts": [
+    {
+      "no": "",
+      "title": "",
+      "subtitle": "",
+      "page": null,
+      "chapters": [
+        "ch01.md",
+        "ch02.md",
+        "ch03.md",
+        "ch04.md",
+        "ch05.md"
+      ]
+    }
+  ],
+  "appendices": [
+    "glossary.md",
+    "timeline.md",
+    "refs.md"
+  ],
+  "back": [
+    "front/afterword.md"
+  ]
+}

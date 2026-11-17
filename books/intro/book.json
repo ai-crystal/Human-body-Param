@@ -1,0 +1,10 @@
+{
+  "order": 1,
+  "title": "人体参数化技术",
+  "volume": "入门册",
+  "subtitle": "入门篇：用几十个参数描述一个人",
+  "author": "Dr. Dezeming",
+  "edition": "2026 年 · 第一版",
+  "pdf": "php-intro.pdf",
+  "toc_sections": false
+}
