@@ -175,7 +175,7 @@ h2{{font-size:44px;line-height:1.42;letter-spacing:3.4px;font-weight:600;color:#
     <div class="panel">
       <div class="lead">从 1995 年的统计形状模型讲到今天的扩散模型与基础模型：先用<em>平均形状 + 形变基 + 骨架蒙皮</em>把「人」压缩成几十个参数，再用可微渲染把它和图像连起来。人体、人脸、人手、动物四条主线共享同一套数学，只是换了对象与关节。<br><br>本册是<em>{volume}</em>：{blurb}</div>
       <ul class="toc">
-        <li><b>入门册</b><span>什么是参数化 · 参数从哪来 · 人怎么动 · 怎么从照片反推 · 怎么用</span></li>
+        <li><b>入门册</b><span>什么是参数化 · 参数从哪来 · 人怎么动 · 怎么从图像反推 · 模型家族 · 2020 年后 · 应用与边界 · 上手</span></li>
         <li><b>数学册</b><span>向量与最小二乘 · 概率与 PCA · 三维表示与旋转 · LBS 与 DQS · 统计形状模型 · 李群与优化</span></li>
         <li><b>人体册</b><span>SCAPE · SMPL 逐项拆公式 · SMPL 家族与最新模型</span></li>
         <li><b>重建册</b><span>优化与回归 · 视频与多人 · 数据集与评估 · 着装与神经渲染 · 动作生成</span></li>
@@ -193,7 +193,7 @@ h2{{font-size:44px;line-height:1.42;letter-spacing:3.4px;font-weight:600;color:#
 
 
 BLURB = {
-    "intro": "只建立概念，不推导公式。一小时读完，知道这门技术在做什么。",
+    "intro": "只建立概念、不推导公式：从参数怎么来，到模型家族、2020 年后的技术、应用与边界。八章读完，能把这一行的全貌说清楚。",
     "math": "所有公式都从定义推起：最小二乘、PCA/SVD、旋转与相机、LBS 与 DQS、统计形状模型、李群与位姿优化。",
     "body": "SCAPE 为什么要作用在三角形上，SMPL 每一项怎么来，STAR / ATLAS / MHR 又改了什么。",
     "recon": "从一张照片到一段视频：优化法与回归法、度量尺度、评估指标、着装与神经渲染、动作生成。",

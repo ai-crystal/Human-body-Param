@@ -1,82 +1,141 @@
 # -*- coding: utf-8 -*-
-"""入门册第 5 章插图：六册的依赖关系。"""
+"""入门册第 5 章插图：模型家族时间线、规模对照。"""
 import sys, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, os.path.join(os.path.dirname(BOOK), "code"))
+import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+from matplotlib.patches import FancyBboxPatch
 import figstyle as fs
 
 FIGDIR = os.path.join(BOOK, "images")
 
+# (年份, 名称, 泳道)
+LANES = ["身体", "人脸", "人手", "动物"]
+COLORS = {"身体": fs.ACCENT, "人脸": fs.BLUE, "人手": fs.GREEN, "动物": fs.PURPLE}
+NODES = [
+    (1999, "3DMM", "人脸"),
+    (2009, "BFM", "人脸"),
+    (2015, "SMPL", "身体"),
+    (2017, "SMPL+H", "身体"),
+    (2017, "FLAME", "人脸"),
+    (2017, "MANO", "人手"),
+    (2017, "SMAL", "动物"),
+    (2019, "SMPL-X", "身体"),
+    (2020, "STAR", "身体"),
+    (2020, "GHUM", "身体"),
+    (2022, "BARC", "动物"),
+    (2023, "HaMeR", "人手"),
+    (2023, "MagicPony", "动物"),
+    (2024, "AniMer", "动物"),
+    (2025, "ATLAS", "身体"),
+    (2025, "MHR", "身体"),
+]
 
-def node(ax, x, y, w, h, title, sub, fc="#FFFFFF", ec=fs.INK, tc=fs.INK, tfs=9.2):
-    ax.add_patch(FancyBboxPatch((x, y), w, h,
-                                boxstyle="round,pad=0.006,rounding_size=0.014",
-                                ec=ec, fc=fc, lw=1.1, zorder=2))
-    ax.text(x + w / 2, y + h * 0.70, title, ha="center", va="center",
-            fontsize=tfs, color=tc, zorder=3)
-    ax.text(x + w / 2, y + h * 0.30, sub, ha="center", va="center",
-            fontsize=7.0, color=fs.MUTED, zorder=3, linespacing=1.6)
 
-
-def arrow(ax, p, q, color=fs.MUTED, lw=1.1, rad=0.0, ls="-"):
-    ax.add_patch(FancyArrowPatch(p, q, arrowstyle="-|>", mutation_scale=11,
-                                 color=color, lw=lw, linestyle=ls,
-                                 connectionstyle="arc3,rad=%s" % rad, zorder=1,
-                                 shrinkA=1.5, shrinkB=1.5))
-
-
-def main():
-    fig = plt.figure(figsize=(6.9, 3.3))
-    ax = fig.add_axes([0, 0, 1, 1])
-    ax.set_xlim(0, 1)
-    ax.set_ylim(0, 1)
+def fig_timeline():
+    fig = plt.figure(figsize=(6.9, 3.7))
+    ax = fig.add_axes([0.078, 0.085, 0.905, 0.83])
+    ax.set_xlim(1997, 2027)
+    ax.set_ylim(-2.6, 14.4)
     ax.axis("off")
 
-    W, H = 0.205, 0.155
-    x0 = 0.045
-    # 左列：入门 -> 数学 -> 人体
-    node(ax, x0, 0.700, W, H, "入门册", "概念与全局地图",
-         fc="#FDF6EE", ec=fs.ACCENT, tc=fs.ACCENT, tfs=9.6)
-    node(ax, x0, 0.390, W, H, "数学册", "向量 · PCA · 旋转\n蒙皮 · 优化",
-         fc="#F3F6FD", ec=fs.BLUE, tc=fs.BLUE, tfs=9.6)
-    node(ax, x0, 0.080, W, H, "人体册", "SCAPE · SMPL\nSMPL 家族",
-         fc="#F1F8F4", ec=fs.GREEN, tc=fs.GREEN, tfs=9.6)
+    gap = 3.6
+    lanes_y = {lane: gap * (len(LANES) - 1 - i) for i, lane in enumerate(LANES)}
 
-    # 右列：三个专业方向
-    W3 = 0.175
-    xs = [0.375, 0.575, 0.775]
-    items = [("重建册", "单图 · 视频\n评估 · 动作", fs.PURPLE),
-             ("脸手册", "3DMM · FLAME\nMANO · 交互", fs.GOLD),
-             ("前沿册", "SMAL · 扩散\n基础模型", fs.PINK)]
-    for (t, s, c), x in zip(items, xs):
-        node(ax, x, 0.080, W3, H, t, s, fc="#FAF7F2", ec=c, tc=c, tfs=9.2)
+    for lane in LANES:
+        y = lanes_y[lane]
+        ax.plot([1997.4, 2026.6], [y, y], color="#E8EAED", lw=1.0, zorder=1)
+        ax.text(1997.0, y, lane, ha="right", va="center", fontsize=8.8,
+                color=COLORS[lane])
 
-    # 纵向依赖：入门 -> 数学 -> 人体
-    cx = x0 + W / 2
-    arrow(ax, (cx, 0.700), (cx, 0.548))
-    arrow(ax, (cx, 0.390), (cx, 0.238))
-    # 人体 -> 三个方向
-    for x in xs:
-        arrow(ax, (x0 + W, 0.141), (x - 0.004, 0.141), color=fs.FAINT, lw=1.0)
-    # 数学 -> 三个方向（虚线捷径）
-    for x in xs:
-        arrow(ax, (x0 + W, 0.435), (x, 0.237), color="#D8DEE7", lw=0.9,
-              rad=-0.14, ls=(0, (3, 2.6)))
+    tiers = [(0.95, "bottom"), (-1.05, "top")]
+    for lane in LANES:
+        y = lanes_y[lane]
+        own = sorted([n for n in NODES if n[2] == lane], key=lambda t: t[0])
+        used_x = [None] * len(tiers)          # 每条标注带最近一次占用的年份
+        for year, name, _ in own:
+            col = COLORS[lane]
+            ax.plot([year], [y], marker="o", ms=6.8, color="white", mec=col,
+                    mew=1.7, zorder=4)
+            # 贪心选一条不撞的标注带：与同带上一个标签至少隔 2.6 年
+            pick, shift = None, 0.0
+            for ti in range(len(tiers)):
+                if used_x[ti] is None or year - used_x[ti] >= 2.6:
+                    pick = ti
+                    break
+            if pick is None:                      # 两条带都挤满了：往右挪一点
+                pick = min(range(len(tiers)), key=lambda ti: used_x[ti])
+                shift = 1.35
+            used_x[pick] = year
+            dy, va = tiers[pick]
+            ax.plot([year, year], [y, y + dy * 0.72], color=col, lw=0.7,
+                    alpha=0.45, zorder=2)
+            ax.text(year + shift, y + dy, name,
+                    ha="left" if shift else "center", va=va, fontsize=7.4,
+                    color=col, zorder=5)
 
-    ax.text(0.775, 0.012, "虚线表示可以直接跳过去，缺的知识再回补",
-            fontsize=7.2, color=fs.FAINT, ha="right")
-    ax.text(0.045, 0.985, "六册的分工与依赖", fontsize=9.8, color=fs.INK, va="top")
-    ax.text(0.045, 0.925, "实线是建议顺序，虚线是可选的捷径",
-            fontsize=8.0, color=fs.MUTED, va="top")
+    for yr in (1999, 2005, 2010, 2015, 2020, 2025):
+        ax.plot([yr, yr], [-2.2, 11.4], color="#F3F4F6", lw=0.6, zorder=0)
+        ax.text(yr, -2.35, str(yr), ha="center", va="top", fontsize=7.0, color=fs.FAINT)
+
+    ax.text(1997.0, 14.3, "四类对象，一条相似的演化路线", fontsize=9.6,
+            color=fs.INK, va="top")
+    ax.text(1997.0, 13.4, "越靠右越新；同一年份的模型上下错开标注", fontsize=7.6,
+            color=fs.MUTED, va="top")
 
     fs.FIGDIR = FIGDIR
     fs.save(fig, "ch05", "fig05-01")
 
 
+def fig_scale():
+    fig, axes = plt.subplots(1, 2, figsize=(6.9, 2.9),
+                             gridspec_kw={"width_ratios": [1.0, 0.85]})
+
+    # 左：顶点数（对数横轴）
+    ax = axes[0]
+    fs.clean(ax, grid=True)
+    data = [("MANO", 778, fs.GREEN), ("FLAME", 5023, fs.BLUE),
+            ("SMPL", 6890, fs.ACCENT), ("SMPL-X", 10475, fs.ACCENT),
+            ("MHR", 73639, fs.PURPLE), ("ATLAS", 115000, fs.PURPLE)]
+    ys = np.arange(len(data))[::-1]
+    for y, (name, v, c) in zip(ys, data):
+        ax.barh(y, v, height=0.55, color=c, alpha=0.85, zorder=2)
+        ax.text(v * 1.12, y, "%s" % format(v, ","), va="center", fontsize=7.4,
+                color=fs.MUTED)
+    ax.set_yticks(ys)
+    ax.set_yticklabels([d[0] for d in data], fontsize=8.0)
+    ax.set_xscale("log")
+    ax.set_xlim(400, 400000)
+    ax.set_xlabel("顶点数（对数轴）", fontsize=8.2)
+    ax.set_title("网格的规模差两个数量级", fontsize=9.2, pad=4)
+    ax.tick_params(labelsize=7.4)
+
+    # 右：关节数
+    ax = axes[1]
+    fs.clean(ax, grid=True)
+    jd = [("FLAME", 4, fs.BLUE), ("MANO", 16, fs.GREEN), ("SMPL", 24, fs.ACCENT),
+          ("SMAL", 33, fs.PURPLE), ("SMPL-X", 54, fs.ACCENT),
+          ("ATLAS", 77, fs.PURPLE), ("MHR", 127, fs.PURPLE)]
+    ys = np.arange(len(jd))[::-1]
+    for y, (name, v, c) in zip(ys, jd):
+        ax.barh(y, v, height=0.55, color=c, alpha=0.85, zorder=2)
+        ax.text(v + 2.4, y, str(v), va="center", fontsize=7.4, color=fs.MUTED)
+    ax.set_yticks(ys)
+    ax.set_yticklabels([d[0] for d in jd], fontsize=8.0)
+    ax.set_xlim(0, 150)
+    ax.set_xlabel("关节数", fontsize=8.2)
+    ax.set_title("关节越多，控制越细也越难拟合", fontsize=9.2, pad=4)
+    ax.tick_params(labelsize=7.4)
+
+    fig.tight_layout(pad=0.5, w_pad=1.4)
+    fs.FIGDIR = FIGDIR
+    fs.save(fig, "ch05", "fig05-02")
+
+
 if __name__ == "__main__":
-    main()
+    fig_timeline()
+    fig_scale()
