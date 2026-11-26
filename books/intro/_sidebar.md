@@ -15,4 +15,4 @@
 - **附录**
   - [附录 A 参考文献](/books/intro/appendix/refs.md)
 
-- <a href="/output/php-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+- <a href="/output/v1-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>

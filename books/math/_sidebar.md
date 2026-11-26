@@ -16,4 +16,4 @@
   - [附录 A 数学补充](/books/math/appendix/math_tools.md)
   - [附录 C 参考文献](/books/math/appendix/refs.md)
 
-- <a href="/output/php-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+- <a href="/output/v2-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>

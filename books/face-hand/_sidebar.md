@@ -15,4 +15,4 @@
   - [附录 A 术语中英对照](/books/face-hand/appendix/glossary.md)
   - [附录 B 参考文献](/books/face-hand/appendix/refs.md)
 
-- <a href="/output/php-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+- <a href="/output/v5-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>

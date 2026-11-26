@@ -11,7 +11,7 @@
   - [第 7 章 这套技术用在哪，边界在哪](/books/intro/chapters/ch07.md)
   - [第 8 章 怎么开始](/books/intro/chapters/ch08.md)
   - [附录 A 参考文献](/books/intro/appendix/refs.md)
-  - <a href="/output/php-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
+  - <a href="/output/v1-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **02　数学册**
   - [本册首页](/books/math/README.md)
@@ -25,7 +25,7 @@
   - [附录 A 数学补充](/books/math/appendix/math_tools.md)
   - [附录 B 术语中英对照](/books/math/appendix/glossary.md)
   - [附录 C 参考文献](/books/math/appendix/refs.md)
-  - <a href="/output/php-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
+  - <a href="/output/v2-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **03　人体册**
   - [本册首页](/books/body/README.md)
@@ -35,7 +35,7 @@
   - [第 4 章 SMPL 是怎么训练出来的：目标函数、求解与评估](/books/body/chapters/ch04.md)
   - [附录 A 术语中英对照](/books/body/appendix/glossary.md)
   - [附录 B 参考文献](/books/body/appendix/refs.md)
-  - <a href="/output/php-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
+  - <a href="/output/v3-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **04　重建册**
   - [本册首页](/books/recon/README.md)
@@ -46,7 +46,7 @@
   - [第 5 章 人体动作与生成模型](/books/recon/chapters/ch05.md)
   - [附录 A 术语中英对照](/books/recon/appendix/glossary.md)
   - [附录 B 参考文献](/books/recon/appendix/refs.md)
-  - <a href="/output/php-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
+  - <a href="/output/v4-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **05　脸手册**
   - [本册首页](/books/face-hand/README.md)
@@ -59,7 +59,7 @@
   - [第 7 章 手物交互与抓取](/books/face-hand/chapters/ch07.md)
   - [附录 A 术语中英对照](/books/face-hand/appendix/glossary.md)
   - [附录 B 参考文献](/books/face-hand/appendix/refs.md)
-  - <a href="/output/php-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
+  - <a href="/output/v5-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **06　前沿册**
   - [本册首页](/books/frontier/README.md)
@@ -71,4 +71,4 @@
   - [附录 A 术语中英对照](/books/frontier/appendix/glossary.md)
   - [附录 B 论文时间线与导读](/books/frontier/appendix/timeline.md)
   - [附录 C 参考文献](/books/frontier/appendix/refs.md)
-  - <a href="/output/php-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
+  - <a href="/output/v6-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>

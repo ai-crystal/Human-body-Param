@@ -14,4 +14,4 @@
   - [附录 C 参考文献](/books/frontier/appendix/refs.md)
   - [附录 B 论文时间线与导读](/books/frontier/appendix/timeline.md)
 
-- <a href="/output/php-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+- <a href="/output/v6-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>

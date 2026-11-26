@@ -13,4 +13,4 @@
   - [附录 A 术语中英对照](/books/recon/appendix/glossary.md)
   - [附录 B 参考文献](/books/recon/appendix/refs.md)
 
-- <a href="/output/php-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+- <a href="/output/v4-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>

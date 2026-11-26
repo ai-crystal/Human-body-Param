@@ -12,4 +12,4 @@
   - [附录 A 术语中英对照](/books/body/appendix/glossary.md)
   - [附录 B 参考文献](/books/body/appendix/refs.md)
 
-- <a href="/output/php-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+- <a href="/output/v3-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>

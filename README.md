@@ -14,12 +14,12 @@
 
 | 册 | 书名 | 一句话 | 页数 | 在线阅读 | PDF |
 | --- | --- | --- | ---: | --- | --- |
-| 01 | [入门册](books/intro/README.md) | 用几十个参数描述一个人 | 81 | [阅读](books/intro/README.md) | <a href="output/php-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
-| 02 | [数学册](books/math/README.md) | 数学与几何 | 142 | [阅读](books/math/README.md) | <a href="output/php-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
-| 03 | [人体册](books/body/README.md) | 人体与参数化模型 | 94 | [阅读](books/body/README.md) | <a href="output/php-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
-| 04 | [重建册](books/recon/README.md) | 从图像到人体 | 83 | [阅读](books/recon/README.md) | <a href="output/php-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
-| 05 | [脸手册](books/face-hand/README.md) | 人脸与人手 | 109 | [阅读](books/face-hand/README.md) | <a href="output/php-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
-| 06 | [前沿册](books/frontier/README.md) | 动物模型与前沿 | 86 | [阅读](books/frontier/README.md) | <a href="output/php-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
+| 01 | [入门册](books/intro/README.md) | 用几十个参数描述一个人 | 81 | [阅读](books/intro/README.md) | <a href="output/v1-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
+| 02 | [数学册](books/math/README.md) | 数学与几何 | 142 | [阅读](books/math/README.md) | <a href="output/v2-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
+| 03 | [人体册](books/body/README.md) | 人体与参数化模型 | 94 | [阅读](books/body/README.md) | <a href="output/v3-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
+| 04 | [重建册](books/recon/README.md) | 从图像到人体 | 83 | [阅读](books/recon/README.md) | <a href="output/v4-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
+| 05 | [脸手册](books/face-hand/README.md) | 人脸与人手 | 109 | [阅读](books/face-hand/README.md) | <a href="output/v5-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
+| 06 | [前沿册](books/frontier/README.md) | 动物模型与前沿 | 86 | [阅读](books/frontier/README.md) | <a href="output/v6-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载</a> |
 
 合计 **36 章 · 595 页**，约 27 MB。每册末尾都有术语表与参考文献。
 
