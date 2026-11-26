@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
-"""第 26 章配套代码：一个不依赖 SMPL 文件的最小 demo。
+"""第 7 章配套代码：一个不依赖 SMPL 文件的最小 demo。
 
 运行:
-    python ch26_demo.py
-会生成 book/images/26/fig26-01.png 与 fig26-02.png
+    python demo.py
+会生成 ../images/07/fig07-01.png 与 fig07-02.png
 """
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 from scipy.optimize import least_squares
 import matplotlib.pyplot as plt
 import figstyle as fs
+
+MATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+fs.FIGDIR = os.path.join(MATH, "images")
 
 RNG = np.random.default_rng(2026)
 
@@ -81,7 +84,7 @@ def fig_space():
         P[:, 1] *= -1
     fig, axs = plt.subplots(1, 2, figsize=(6.9, 3.0))
     for ax, k, title in zip(axs, [0, 1], ["第一主成分：整体高矮", "第二主成分：四肢比例"]):
-        ax.set_xlim(0.02, 0.98); ax.set_ylim(-0.18, 1.12)
+        ax.set_xlim(0.05, 0.95); ax.set_ylim(-0.34, 1.10)
         ax.set_aspect("equal"); ax.axis("off")
         pts = mu.reshape(-1, 2)
         draw_body(ax, pts, color="#D1D5DB", lw=2.4)
@@ -94,7 +97,7 @@ def fig_space():
                         arrowprops=dict(arrowstyle="-|>", color=fs.ACCENT, lw=1.1, alpha=0.85))
         ax.set_title(title, fontsize=9.2)
     fig.tight_layout()
-    fs.save(fig, "ch07", "fig07-01")
+    fs.save(fig, "ch07", "fig07-02")
 
 
 # ---------- 3. 从 2D 关键点拟合形状参数 ----------
@@ -118,20 +121,21 @@ def fig_fit():
 
     fig, axs = plt.subplots(1, 2, figsize=(6.9, 2.8))
     ax = axs[0]
-    ax.set_xlim(0.15, 0.85); ax.set_ylim(0.05, 1.02); ax.axis("off"); ax.set_aspect("equal")
+    ax.set_xlim(0.12, 0.88); ax.set_ylim(-0.34, 1.16); ax.axis("off"); ax.set_aspect("equal")
     draw_body(ax, target, color=fs.ACCENT, lw=2.2, alpha=0.9)
     draw_body(ax, pred, color=fs.BLUE, lw=2.0, alpha=0.8)
-    fs.label(ax, 0.18, 0.98, "橙：目标　蓝：拟合", fs=8.4, color=fs.MUTED, ha="left")
+    fs.label(ax, 0.13, 1.11, "橙：目标　蓝：拟合", fs=8.4, color=fs.MUTED, ha="left")
     ax.set_title("拟合结果", fontsize=9)
 
     ax = axs[1]
     err = np.linalg.norm(pred - target, axis=1)
     fs.clean(ax, grid=True)
-    ax.bar(np.arange(len(err)), err * 100, color=fs.BLUE, alpha=0.75)
+    ax.bar(np.arange(len(err)), err * 170, color=fs.BLUE, alpha=0.75)
+    ax.set_xticks(np.arange(0, len(err), 2))
     ax.set_xlabel("关键点编号"); ax.set_ylabel("误差（cm，假设身高 1.7m）")
     ax.set_title(f"逐点误差：平均 {err.mean()*170:.2f} cm", fontsize=9)
     fig.tight_layout()
-    fs.save(fig, "ch07", "fig07-02")
+    fs.save(fig, "ch07", "fig07-04")
 
 
 if __name__ == "__main__":

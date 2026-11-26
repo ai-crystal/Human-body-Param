@@ -65,7 +65,7 @@ def main():
             fontsize=7.6, color=fs.MUTED, va="top")
 
     fs.FIGDIR = FIGDIR
-    fs.save(fig, "ch01", "fig01-03")
+    fs.save(fig, "ch01", "fig01-04")
 
 
 if __name__ == "__main__":

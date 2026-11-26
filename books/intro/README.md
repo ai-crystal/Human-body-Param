@@ -4,7 +4,7 @@
 
 本册讲用几十个参数描述一个人。
 
-共 8 章 · 63 页
+共 8 章 · 81 页
 
 [从第 1 章开始](chapters/ch01.md)　·　<a href="../../output/php-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 

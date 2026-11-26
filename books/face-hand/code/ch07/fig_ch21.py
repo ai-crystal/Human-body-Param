@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
-"""第 21 章插图：接触状态与摩擦锥、数据集对比、表示演化。"""
+"""第 7 章插图：接触状态与摩擦锥（图 7-1）、数据集对比（图 7-2）、三种耦合方式（图 7-3）、表示演化（图 7-4）。"""
 import os
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Polygon, Wedge, Ellipse, FancyArrowPatch
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_BOOKS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__)))))
+sys.path.insert(0, os.path.join(_BOOKS, "code"))
 import figstyle as fs
+
+fs.FIGDIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__)))), "images")
 
 SKIN = "#F7F0E7"
 OBJ = "#EFE7DC"
@@ -46,7 +51,7 @@ def fig21_01():
     ax.annotate("", xy=(0.607, 0.600), xytext=(0.733, 0.600),
                 arrowprops=dict(arrowstyle="<->", color=fs.MUTED, lw=0.9))
     fs.label(ax, 0.670, 0.655, r"$d>0$", fs=8.4, color=fs.MUTED)
-    fs.label(ax, 0.5, 0.115, "两项损失都接近 0，", fs=7.2, color=fs.MUTED)
+    fs.label(ax, 0.5, 0.115, "式 (7.3) 两项都接近 0，", fs=7.2, color=fs.MUTED)
     fs.label(ax, 0.5, 0.065, "但“抓住”无从谈起", fs=7.2, color=fs.MUTED)
 
     # ---------------- ② 穿透
@@ -60,7 +65,7 @@ def fig21_01():
     ax.annotate("", xy=(0.738, 0.650), xytext=(0.878, 0.650),
                 arrowprops=dict(arrowstyle="<->", color=fs.ACCENT, lw=0.9))
     fs.label(ax, 0.855, 0.598, r"$d<0$", fs=8.4, color=fs.ACCENT)
-    fs.label(ax, 0.5, 0.115, "式 (21.2) 惩罚陷进去的顶点，", fs=7.2, color=fs.MUTED)
+    fs.label(ax, 0.5, 0.115, "式 (7.3) 排斥项惩罚陷进去的顶点，", fs=7.2, color=fs.MUTED)
     fs.label(ax, 0.5, 0.065, "网格必须被推回表面", fs=7.2, color=fs.MUTED)
 
     # ---------------- ③ 接触点放大：摩擦锥
@@ -95,9 +100,9 @@ def fig21_01():
     ax.add_patch(Wedge(cpt, 0.14, 90, 90 + ang, facecolor="none", edgecolor=fs.MUTED, lw=0.6))
     fs.label(ax, 0.28, y_surf + 0.135, r"$\arctan\mu$", fs=7.2, color=fs.MUTED, ha="right")
     fs.label(ax, 0.5, 0.115, "接触力必须落在锥内，", fs=7.2, color=fs.MUTED)
-    fs.label(ax, 0.5, 0.065, "否则接触点会打滑（式 21.3）", fs=7.2, color=fs.MUTED)
+    fs.label(ax, 0.5, 0.065, "否则接触点会打滑（式 7.4）", fs=7.2, color=fs.MUTED)
 
-    fs.save(fig, "ch07", "fig07-02")
+    fs.save(fig, "ch07", "fig07-01")
 
 
 def fig21_02():
@@ -143,7 +148,7 @@ def fig21_02():
              "注意 GRAB 的“掌心无标记”——只有这样才能采到真实的掌面接触，而掌面恰恰是抓取最关键的区域。",
              fs=7.2, color=fs.MUTED, ha="left")
 
-    fs.save(fig, "ch07", "fig07-01")
+    fs.save(fig, "ch07", "fig07-02")
 
 
 def _cup_shape(cx=0.60, cy=0.50, w=0.34, h=0.42, taper=0.035):
@@ -221,7 +226,7 @@ def fig21_03():
 
         fs.label(ax, 0.5, 0.075, subs[k], fs=6.9, color=fs.MUTED)
 
-    fs.save(fig, "ch07", "fig07-03")
+    fs.save(fig, "ch07", "fig07-04")
 
 
 if __name__ == "__main__":

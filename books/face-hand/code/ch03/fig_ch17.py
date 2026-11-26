@@ -94,7 +94,7 @@ def fig_hybrid():
              "多相机阵列贵、慢、只能扫几百人，\n但几何干净到能看见毛孔，\n正好用来学“细节”。\n\n"
              "两者相乘，才既有泛化又有保真。",
              fs=7.6, color=fs.MUTED, ha="left", va="top")
-    fs.save(fig, "ch03", "fig03-02")
+    fs.save(fig, "ch03", "fig03-03")
 
 
 def _bumpy(n=192, seed=3):
@@ -152,7 +152,7 @@ def fig_reflectance():
     fig.text(0.5, 0.045,
              "3DMM 只给一张低维彩色纹理；AvatarMe 这类工作把外观拆成逐像素的反照率与法线，才能换光源重渲",
              ha="center", fontsize=8.2, color=fs.INK)
-    fs.save(fig, "ch03", "fig03-03")
+    fs.save(fig, "ch03", "fig03-04")
 
 
 if __name__ == "__main__":

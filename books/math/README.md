@@ -4,7 +4,7 @@
 
 本册讲数学与几何。
 
-共 7 章 · 99 页
+共 7 章 · 142 页
 
 [从第 1 章开始](chapters/ch01.md)　·　<a href="../../output/php-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 

@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """第 4 章插图：三维表示、旋转、相机投影。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Circle, FancyArrowPatch
 import figstyle as fs
+
+MATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+fs.FIGDIR = os.path.join(MATH, "images")
 
 
 def rot2(a):
@@ -99,7 +102,7 @@ def fig_pinhole():
     fs.label(ax, -0.30, 3.55,
              "针孔相机（侧视图）：三维点沿光线压到像平面，深度 $Z$ 越大，像越小",
              fs=9.4, ha="left", color=fs.INK)
-    fs.save(fig, "ch03", "fig03-02")
+    fs.save(fig, "ch03", "fig03-04")
 
 
 def fig_mesh():
@@ -122,7 +125,7 @@ def fig_mesh():
     fs.label(ax, 0.86, 0.54, "法线 $\\mathbf{n}$", fs=9, color=fs.GREEN)
     ax.set_xlim(0, 1.15); ax.set_ylim(0, 1.0)
     ax.set_title("三角网格：顶点 + 边 + 面；每个面有朝向，每个顶点可带法线", fontsize=9.8)
-    fs.save(fig, "ch03", "fig03-03")
+    fs.save(fig, "ch03", "fig03-05")
 
 
 if __name__ == "__main__":

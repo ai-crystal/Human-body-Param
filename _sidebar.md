@@ -2,24 +2,73 @@
 
 - **01　入门册**
   - [本册首页](/books/intro/README.md)
-  - <a href="/output/php-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+  - [第 1 章 什么是「参数化人体」](/books/intro/chapters/ch01.md)
+  - [第 2 章 参数从哪里来](/books/intro/chapters/ch02.md)
+  - [第 3 章 人是怎样动起来的](/books/intro/chapters/ch03.md)
+  - [第 4 章 怎样从一张照片反推](/books/intro/chapters/ch04.md)
+  - [第 5 章 模型家族全景：四种对象，七个名字](/books/intro/chapters/ch05.md)
+  - [第 6 章 2020 年之后：神经渲染、扩散与基础模型](/books/intro/chapters/ch06.md)
+  - [第 7 章 这套技术用在哪，边界在哪](/books/intro/chapters/ch07.md)
+  - [第 8 章 怎么开始](/books/intro/chapters/ch08.md)
+  - [附录 A 参考文献](/books/intro/appendix/refs.md)
+  - <a href="/output/php-intro.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **02　数学册**
   - [本册首页](/books/math/README.md)
-  - <a href="/output/php-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+  - [第 1 章 数学工具箱（一）：向量、矩阵与最小二乘](/books/math/chapters/ch01.md)
+  - [第 2 章 数学工具箱（二）：概率、协方差与 PCA](/books/math/chapters/ch02.md)
+  - [第 3 章 三维世界的表示：点、网格、旋转与相机](/books/math/chapters/ch03.md)
+  - [第 4 章 旋转的李群视角与非线性优化](/books/math/chapters/ch04.md)
+  - [第 5 章 骨架、蒙皮与线性混合蒙皮（LBS）](/books/math/chapters/ch05.md)
+  - [第 6 章 统计形状模型：从 ASM 到 3DMM](/books/math/chapters/ch06.md)
+  - [第 7 章 动手实践：从 PCA 到拟合](/books/math/chapters/ch07.md)
+  - [附录 A 数学补充](/books/math/appendix/math_tools.md)
+  - [附录 B 术语中英对照](/books/math/appendix/glossary.md)
+  - [附录 C 参考文献](/books/math/appendix/refs.md)
+  - <a href="/output/php-math.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **03　人体册**
   - [本册首页](/books/body/README.md)
-  - <a href="/output/php-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+  - [第 1 章 SCAPE：把「形状」和「姿态」拆开](/books/body/chapters/ch01.md)
+  - [第 2 章 SMPL：一个公式统治人体](/books/body/chapters/ch02.md)
+  - [第 3 章 SMPL 家族：从身体到手，再到脸](/books/body/chapters/ch03.md)
+  - [第 4 章 SMPL 是怎么训练出来的：目标函数、求解与评估](/books/body/chapters/ch04.md)
+  - [附录 A 术语中英对照](/books/body/appendix/glossary.md)
+  - [附录 B 参考文献](/books/body/appendix/refs.md)
+  - <a href="/output/php-body.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **04　重建册**
   - [本册首页](/books/recon/README.md)
-  - <a href="/output/php-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+  - [第 1 章 从单张图片反推人体：优化法与回归法](/books/recon/chapters/ch01.md)
+  - [第 2 章 视频、多人、全身与度量尺度](/books/recon/chapters/ch02.md)
+  - [第 3 章 数据集、评估指标与常见坑](/books/recon/chapters/ch03.md)
+  - [第 4 章 着装人体：衣服、头发与神经渲染](/books/recon/chapters/ch04.md)
+  - [第 5 章 人体动作与生成模型](/books/recon/chapters/ch05.md)
+  - [附录 A 术语中英对照](/books/recon/appendix/glossary.md)
+  - [附录 B 参考文献](/books/recon/appendix/refs.md)
+  - <a href="/output/php-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **05　脸手册**
   - [本册首页](/books/face-hand/README.md)
-  - <a href="/output/php-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+  - [第 1 章 3DMM 深入与 Basel Face Model](/books/face-hand/chapters/ch01.md)
+  - [第 2 章 FLAME：脸、颈、表情的统一参数化](/books/face-hand/chapters/ch02.md)
+  - [第 3 章 高保真人脸：细节、纹理与身份](/books/face-hand/chapters/ch03.md)
+  - [第 4 章 人脸驱动与神经头像](/books/face-hand/chapters/ch04.md)
+  - [第 5 章 手的解剖与 MANO](/books/face-hand/chapters/ch05.md)
+  - [第 6 章 单手重建：从优化到 Transformer](/books/face-hand/chapters/ch06.md)
+  - [第 7 章 手物交互与抓取](/books/face-hand/chapters/ch07.md)
+  - [附录 A 术语中英对照](/books/face-hand/appendix/glossary.md)
+  - [附录 B 参考文献](/books/face-hand/appendix/refs.md)
+  - <a href="/output/php-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 
 - **06　前沿册**
   - [本册首页](/books/frontier/README.md)
-  - <a href="/output/php-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载 PDF</a>
+  - [第 1 章 SMAL：四足动物的参数化](/books/frontier/chapters/ch01.md)
+  - [第 2 章 动物重建：从 SMALST 到 MagicPony](/books/frontier/chapters/ch02.md)
+  - [第 3 章 跨物种：鸟类、鱼类与动物生成](/books/frontier/chapters/ch03.md)
+  - [第 4 章 生成式人体：从扩散到基础模型](/books/frontier/chapters/ch04.md)
+  - [第 5 章 研究脉络与未来](/books/frontier/chapters/ch05.md)
+  - [附录 A 术语中英对照](/books/frontier/appendix/glossary.md)
+  - [附录 B 论文时间线与导读](/books/frontier/appendix/timeline.md)
+  - [附录 C 参考文献](/books/frontier/appendix/refs.md)
+  - <a href="/output/php-frontier.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>

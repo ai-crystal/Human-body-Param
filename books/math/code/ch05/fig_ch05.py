@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """第 5 章插图：骨架、LBS 与蒙皮伪影。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Polygon, FancyArrowPatch
 import figstyle as fs
+
+MATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+fs.FIGDIR = os.path.join(MATH, "images")
 
 
 def fig_skeleton():
@@ -86,7 +89,7 @@ def fig_lbs():
     axs[1].set_title("关节弯曲 90°", fontsize=9.4)
     fs.label(axs[1], 0.05, 0.07, "混合点落在两点连线上 → 肢体变短", fs=7.8, color=fs.MUTED, ha="left")
     fig.tight_layout()
-    fs.save(fig, "ch05", "fig05-02")
+    fs.save(fig, "ch05", "fig05-03")
 
 
 def fig_artifact():
@@ -111,7 +114,7 @@ def fig_artifact():
     fs.label(ax, 0.52, 0.145, "权重从 0 连续过渡到 1", fs=8, color=fs.MUTED)
     fs.label(ax, 0.5, -0.35, "如果权重是硬切换（0 或 1），关节处会撕裂；平滑权重让皮肤自然弯折",
              fs=8.2, color=fs.INK)
-    fs.save(fig, "ch05", "fig05-03")
+    fs.save(fig, "ch05", "fig05-04")
 
 
 if __name__ == "__main__":

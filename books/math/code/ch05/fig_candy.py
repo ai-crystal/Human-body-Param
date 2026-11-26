@@ -4,11 +4,14 @@
    fig05-05 LBS 与 DQS 的半径对比
 """
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Ellipse
 import figstyle as fs
+
+MATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+fs.FIGDIR = os.path.join(MATH, "images")
 
 
 def fig_candy():
@@ -57,7 +60,7 @@ def fig_candy():
     ax.tick_params(labelsize=7.8)
 
     fig.tight_layout(pad=0.5, w_pad=1.2)
-    fs.save(fig, "ch05", "fig05-04")
+    fs.save(fig, "ch05", "fig05-05")
 
 
 def fig_lbs_vs_dqs():
@@ -85,7 +88,7 @@ def fig_lbs_vs_dqs():
     ax.legend(fontsize=8.0, frameon=False, loc="lower right")
     ax.tick_params(labelsize=7.8)
     fig.tight_layout(pad=0.5)
-    fs.save(fig, "ch05", "fig05-06")
+    fs.save(fig, "ch05", "fig05-07")
 
 
 if __name__ == "__main__":

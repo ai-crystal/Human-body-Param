@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """第 23 章插图：从图像重建动物。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Ellipse, Circle
 import figstyle as fs
+
+fs.FIGDIR = "E:/Study/人体参数化技术/人体参数化技术学习/books/frontier/images"
 
 
 # ---------------- 图 23-1：一条简短的时间线 ----------------

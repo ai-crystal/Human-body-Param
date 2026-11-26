@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
-"""第 20 章插图：四种重建范式、时间线、FreiHAND 上的公开结果。"""
+"""第 6 章插图：四种重建范式（图 6-1）、时间线（图 6-2）、FreiHAND 上的公开结果（图 6-4）。"""
 import os
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_BOOKS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__)))))
+sys.path.insert(0, os.path.join(_BOOKS, "code"))
 import figstyle as fs
+
+fs.FIGDIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__)))), "images")
 
 
 def _panel(fig, rect, title, sub, boxes, color, loop=False):
@@ -124,7 +129,7 @@ def fig20_03():
                 fontsize=7.2, color=fs.ACCENT,
                 arrowprops=dict(arrowstyle="-", color=fs.FAINT, lw=0.8))
 
-    fs.save(fig, "ch06", "fig06-03")
+    fs.save(fig, "ch06", "fig06-04")
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@
 
 本册讲从图像到人体。
 
-共 5 章 · 45 页
+共 5 章 · 83 页
 
 [从第 1 章开始](chapters/ch01.md)　·　<a href="../../output/php-recon.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 

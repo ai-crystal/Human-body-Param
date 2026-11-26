@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
-"""第 15 章插图：3DMM 深入与 Basel Face Model。"""
+"""第 1 章插图：3DMM 深入与 Basel Face Model。
+
+本册图片统一落到 books/face-hand/images/，因此把 figstyle 的 FIGDIR 指过去。
+"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, "E:/Study/人体参数化技术/人体参数化技术学习/books/code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, FancyArrowPatch
 import figstyle as fs
+
+fs.FIGDIR = "E:/Study/人体参数化技术/人体参数化技术学习/books/face-hand/images"
 
 W, H = 6.7, 4.15          # 画布（英寸）
 KY = W / H                # 让 x/y 单位在屏幕上等长所需的 y 缩放
@@ -158,10 +163,10 @@ def fig_linear_vs_bilinear():
     fs.label(ax, 0.5, 0.075,
              "代价：双线性把表情离散成若干张现成脸，捕捉不到连续说话、皱眉这类过渡",
              fs=8.4, color=fs.MUTED)
-    fs.save(fig, "ch01", "fig01-03")
+    fs.save(fig, "ch01", "fig01-04")
 
 
 if __name__ == "__main__":
-    fig_pipeline()
     fig_timeline()
+    fig_pipeline()
     fig_linear_vs_bilinear()

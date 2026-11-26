@@ -47,11 +47,11 @@
       homepage: 'README.md',
       loadSidebar: true,
       coverpage: true,
-      relativePath: true,
+      relativePath: false,
       subMaxLevel: 2,
       maxLevel: 3,
       auto2top: true,
-      noCompileLinks: ['output/', '\\.pdf$'],
+      noCompileLinks: ['output/', '^/output/', '\.pdf$'],
       search: {
         placeholder: '搜索全书',
         noData: '没有找到内容。',
@@ -73,26 +73,58 @@
       mermaid: { theme: 'default' },
       plugins: [
         function (hook) {
-          hook.doneEach(function () {
+          // 正文里的图写 ../images/NN/x.png（保证 GitHub 网页端直接看 md 也能显示），
+          // 站点里按当前所在册重写成 /books/<册>/images/NN/x.png。
+          function bookOf() {
             var route = decodeURI(location.hash.replace(/^#\/?/, '').split('?')[0]);
-            if (!route || /\/$/.test(route)) { route += 'README.md'; }
-            var dir = route.replace(/[^\/]*$/, '');
-            function normalize(p) {
-              var stack = dir.split('/').filter(Boolean);
-              p.split('/').forEach(function (seg) {
-                if (seg === '..') { stack.pop(); }
-                else if (seg !== '.' && seg !== '') { stack.push(seg); }
-              });
-              return '/' + stack.join('/');
-            }
-            document.querySelectorAll('.markdown-section img').forEach(function (img) {
-              var src = img.getAttribute('src') || '';
-              if (src && !/^(https?:|\/|data:)/.test(src)) {
-                img.setAttribute('src', normalize(src));
-              }
+            var m = route.match(/^books\/([^\/]+)\//);
+            return m ? m[1] : 'intro';
+          }
+          function basePath() {
+            return new URL('.', location.href).pathname;   // '/' 或 '/<repo>/'
+          }
+          function fixHtml(html, book) {
+            var base = basePath();
+            html = html.replace(/(src=")(?:\.\.\/)?images\//g,
+              '$1' + base + 'books/' + book + '/images/');
+            // [@key] / [@a,@b] -> 上标编号，点击跳到本册参考文献
+            var all = window.CITES_BY_BOOK || {};
+            var map = all[book] || {};
+            html = html.replace(/\[@([A-Za-z0-9_,;\s]+)\]/g, function (_, keys) {
+              return keys.split(/[,;]\s*/).map(function (k) {
+                k = k.trim();
+                var it = map[k];
+                if (!it) return k;
+                return '<a class="cite" href="#/books/' + book +
+                  '/appendix/refs?id=ref-' + it.n + '">[' + it.n + ']</a>';
+              }).join('');
             });
-            if (window.renderMathInElement) {
-              window.renderMathInElement(document.querySelector('.markdown-section'), {
+            return html;
+          }
+          hook.afterEach(function (html) {
+            return fixHtml(html, bookOf());
+          });
+          hook.doneEach(function () {
+            var book = bookOf();
+            var base = basePath();
+            var sec = document.querySelector('.markdown-section');
+            if (sec) {
+              sec.querySelectorAll('img').forEach(function (img) {
+                var src = img.getAttribute('src') || '';
+                var m = src.match(/images\/(.+)$/);
+                if (m) img.setAttribute('src', base + 'books/' + book + '/images/' + m[1]);
+              });
+              // 静态文件链接（PDF 等）不能被改写成 hash 路由
+              sec.querySelectorAll('a[href^="#/"]').forEach(function (a) {
+                var m = a.getAttribute('href').match(/\.pdf(\?.*)?$/i);
+                if (!m) return;
+                a.setAttribute('href', base + a.getAttribute('href').replace(/^#\//, ''));
+                a.setAttribute('target', '_blank');
+                a.setAttribute('rel', 'noopener');
+              });
+            }
+            if (window.renderMathInElement && sec) {
+              window.renderMathInElement(sec, {
                 delimiters: [
                   { left: '$$', right: '$$', display: true },
                   { left: '\\[', right: '\\]', display: true },
@@ -108,6 +140,8 @@
       ]
     };
   </script>
+  <!-- 各册引用编号表（gen_appendix.py 生成） -->
+  <script src="books/build/cites.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.5/dist/mermaid.min.js"></script>

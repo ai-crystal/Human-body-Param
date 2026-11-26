@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 """第 6 章：ASM 训练学到了什么（逐点灰度剖面）——图 6-5。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 import figstyle as fs
+
+MATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+fs.FIGDIR = os.path.join(MATH, "images")
 
 
 def fig_profile():
@@ -68,7 +71,7 @@ def fig_profile():
     ax.tick_params(labelsize=7.6)
 
     fig.tight_layout(pad=0.5, w_pad=1.0)
-    fs.save(fig, "ch06", "fig06-05")
+    fs.save(fig, "ch06", "fig06-03")
 
 
 if __name__ == "__main__":

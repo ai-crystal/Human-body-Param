@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 """第 1 章插图。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+HERE = os.path.dirname(os.path.abspath(__file__))
+BOOK = os.path.abspath(os.path.join(HERE, "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(BOOK), "code"))
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle, Circle
 import matplotlib.tri as mtri
 import figstyle as fs
+
+FIGDIR = os.path.join(BOOK, "images")
 
 rng = np.random.default_rng(7)
 
@@ -69,6 +73,7 @@ def fig_representations():
     fs.label(axs[3], 0.5, -0.1, "10 个数就能重建", fs=7.8, color=fs.MUTED)
 
     fig.subplots_adjust(wspace=0.18, bottom=0.2, top=0.88)
+    fs.FIGDIR = FIGDIR
     fs.save(fig, "ch01", "fig01-01")
 
 
@@ -95,41 +100,10 @@ def fig_map():
            fc="#FDF6EC", ec=fs.ACCENT, fs=9.2)
     fs.label(ax, 0.5, 0.045, "四条主线解决的是同一个问题：用少量参数，控制一个高维的三维形状",
              fs=8.2, color=fs.MUTED)
-    fs.save(fig, "ch01", "fig01-02")
-
-
-# ---------------- 图 1-3 阅读路线 ----------------
-def fig_route():
-    fig, ax = fs.canvas(6.9, 2.9)
-    ax.set_xlim(0, 1); ax.set_ylim(0, 1)
-    NL = chr(10)
-    def two(a, b):
-        return a + NL + b
-    rows = [
-        ("零基础通读", [two("第 1–6 章", "数学与形变"), two("第 7–14 章", "人体"),
-                        two("第 15–24 章", "脸 / 手 / 动物"), two("第 25–27 章", "前沿与实战")], fs.ACCENT),
-        ("只想做人体", [two("第 1–6 章", "重点第 3、5 章"), two("第 7–14 章", "人体全流程"),
-                        two("第 26 章", "动手实践")], fs.BLUE),
-        ("只想做人脸", [two("第 2–3、6 章", "PCA 与 3DMM"), two("第 15–18 章", "人脸"),
-                        two("第 26 章", "动手实践")], fs.GREEN),
-    ]
-    for r, (name, chips, c) in enumerate(rows):
-        y = 0.80 - r * 0.30
-        fs.label(ax, 0.02, y, name, fs=9.2, ha="left", color=c, weight="bold")
-        x = 0.20
-        gap = 0.035
-        w = (0.985 - x - gap * (len(chips) - 1)) / len(chips)
-        for i, ch in enumerate(chips):
-            fs.box(ax, x, y - 0.075, w, 0.15, ch, fc="white", ec=c, fs=7.9, lw=1.0)
-            if i:
-                fs.arrow(ax, (x - 0.035, y), (x - 0.004, y), color=c, lw=0.9)
-            x += w + gap
-    fs.label(ax, 0.5, 0.045, "章节之间有依赖，但第 26 章的代码可以随时插入练习",
-             fs=8, color=fs.MUTED)
+    fs.FIGDIR = FIGDIR
     fs.save(fig, "ch01", "fig01-03")
 
 
 if __name__ == "__main__":
     fig_representations()
     fig_map()
-    fig_route()

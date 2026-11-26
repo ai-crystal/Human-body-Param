@@ -4,7 +4,7 @@
 
 本册讲人脸与人手。
 
-共 7 章 · 69 页
+共 7 章 · 109 页
 
 [从第 1 章开始](chapters/ch01.md)　·　<a href="../../output/php-face-hand.pdf" target="_blank" rel="noopener" data-router-ignore>下载本册 PDF</a>
 

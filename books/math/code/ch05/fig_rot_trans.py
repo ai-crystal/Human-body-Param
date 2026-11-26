@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """第 5 章：绕关节旋转 = 旋转 + 平移（图 5-5）。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Arc
 import figstyle as fs
+
+MATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+fs.FIGDIR = os.path.join(MATH, "images")
 
 
 def rot90(p):
@@ -65,7 +68,7 @@ def fig_rot_trans():
     ax.text(0.22, -0.26, "以世界原点为参照，平移项就露出来了", fontsize=7.6, color=fs.MUTED)
 
     fig.tight_layout(pad=0.4, w_pad=0.8)
-    fs.save(fig, "ch05", "fig05-05")
+    fs.save(fig, "ch05", "fig05-06")
 
 
 if __name__ == "__main__":

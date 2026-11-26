@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """第 25 章插图：生成模型与基础模型。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch
 import figstyle as fs
+
+fs.FIGDIR = "E:/Study/人体参数化技术/人体参数化技术学习/books/frontier/images"
 
 
 def fig_diffusion():
@@ -27,7 +29,7 @@ def fig_diffusion():
     fs.label(ax, 0.76, 0.14, "反向：学习去噪", fs=8.2, color=fs.ACCENT)
     fs.label(ax, 0.5, 0.93, "扩散模型：把“生成”变成“逐步去噪”", fs=9.8)
     fs.label(ax, 0.5, 0.04, "条件（文本/图像/骨架）在每一步注入，控制去噪方向", fs=8, color=fs.MUTED)
-    fs.save(fig, "ch04", "fig04-01")
+    fs.save(fig, "ch04", "fig04-02")
 
 
 def fig_timeline():
@@ -37,7 +39,7 @@ def fig_timeline():
              (2022, "DreamFusion\nSDS 文生 3D", ""), (2023, "3DGS\n实时渲染", ""),
              (2024, "SMPLer-X / Multi-HMR\n基础模型化", "")]
     fs.timeline(ax, items, y=0.50, fs=7.8)
-    fs.save(fig, "ch04", "fig04-02")
+    fs.save(fig, "ch04", "fig04-01")
 
 
 def fig_stack():
@@ -58,5 +60,4 @@ def fig_stack():
 
 if __name__ == "__main__":
     fig_diffusion()
-    fig_timeline()
     fig_stack()

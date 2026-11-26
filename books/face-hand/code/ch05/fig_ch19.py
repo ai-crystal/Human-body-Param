@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-"""第 19 章插图：手部骨骼与 21 关键点、MANO 数据流、模型包含关系。"""
+"""第 5 章插图：手部骨骼与 21 关键点、MANO 数据流、模型包含关系。"""
 import os
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Polygon
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, "E:/Study/人体参数化技术/人体参数化技术学习/books/code")
 import figstyle as fs
+
+fs.FIGDIR = "E:/Study/人体参数化技术/人体参数化技术学习/books/face-hand/images"
 
 ASPECT = 6.5 / 4.6          # 画布宽高比，用于保证圆看起来是圆
 
@@ -169,7 +171,7 @@ def fig19_02():
            "16 个关节 + 5 个指尖顶点 = 21 个关键点", ec=fs.PINK, fs=8.4)
     fs.arrow(ax, (0.455, 0.240), (0.455, 0.136), color=fs.INK)
 
-    fs.save(fig, "ch05", "fig05-02")
+    fs.save(fig, "ch05", "fig05-03")
 
 
 def fig19_03():
@@ -213,7 +215,7 @@ def fig19_03():
     ax2.tick_params(axis="y", length=0)
     ax2.tick_params(axis="x", labelsize=7.2)
 
-    fs.save(fig, "ch05", "fig05-03")
+    fs.save(fig, "ch05", "fig05-04")
 
 
 if __name__ == "__main__":

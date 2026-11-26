@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """第 6 章插图：对应、ASM 形状空间、3DMM 流程。"""
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, r"E:\Study\人体参数化技术\人体参数化技术学习\books\code")
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Circle
 import figstyle as fs
+
+MATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+fs.FIGDIR = os.path.join(MATH, "images")
 
 
 def face_outline(cx=0.5, cy=0.5, w=0.26, h=0.34, jaw=1.0, n=18, rot=0.0):
@@ -68,7 +71,7 @@ def fig_pipeline():
     cols = [fs.BLUE, fs.GREEN, fs.MUTED, fs.ACCENT, fs.PURPLE]
     fs.flow(ax, labs, y=0.52, h=0.30, fs=8.2, colors=cols)
     fs.label(ax, 0.5, 0.12, "关键：所有扫描必须顶点一一对应，否则“相减”没有意义", fs=8.4, color=fs.MUTED)
-    fs.save(fig, "ch06", "fig06-03")
+    fs.save(fig, "ch06", "fig06-06")
 
 
 if __name__ == "__main__":
